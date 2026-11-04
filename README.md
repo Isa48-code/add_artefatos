@@ -6,10 +6,12 @@ Seminário de Avaliação de Desempenho (UFOPA). O projeto mede a fila da catrac
 
 | Arquivo | Para quê | Onde roda |
 |---|---|---|
-| `index.html` | Página de coleta: conta chegadas, anota a fila, cronometra atendimentos e exporta CSV | Navegador do celular |
+| `index.html` | Estrutura da página de coleta | Navegador do celular |
+| `style.css` | Estilos da página | Carregado por `index.html` |
+| `app.js` | Lógica da coleta, cronômetro e exportação CSV | Carregado por `index.html` |
 | `analise_catraca.py` | Calcula λ e μ, aplica as fórmulas, simula, valida e compara cenários | Terminal (Python 3) |
 
-Um não depende do outro. Pode deixar os dois na mesma pasta.
+A página usa `style.css` e `app.js`; mantenha os três arquivos na mesma pasta. A página de coleta e o script de análise são independentes.
 
 ## 1. Coleta (dois observadores por rodada)
 

@@ -6,99 +6,7 @@
 <title>Coleta da Catraca</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap">
-<style>
-/* Layout: coluna única de celular; cabeçalho com relógio da coleta, três abas (Chegadas, Fila, Dados). */
-:root {
-  --bg: #eceff1;
-  --surface: #ffffff;
-  --ink: #14212b;
-  --muted: #5c6b77;
-  --line: #d3dae0;
-  --arrive: #0a6a8a;
-  --arrive-soft: #d8edf4;
-  --serve: #b8500a;
-  --serve-soft: #f8e3d3;
-  --alert: #c0392b;
-  --font-display: "Barlow Condensed", "Arial Narrow", sans-serif;
-  --font-body: "Barlow", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0f161c; --surface: #17212a; --ink: #e8eef2; --muted: #93a3af; --line: #2a3945;
-    --arrive: #4cb8d9; --arrive-soft: #12343f; --serve: #f0985a; --serve-soft: #3b2616; --alert: #ff7a6b;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0f161c; --surface: #17212a; --ink: #e8eef2; --muted: #93a3af; --line: #2a3945;
-  --arrive: #4cb8d9; --arrive-soft: #12343f; --serve: #f0985a; --serve-soft: #3b2616; --alert: #ff7a6b;
-  color-scheme: dark;
-}
-* { box-sizing: border-box; }
-body {
-  background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.4;
-  padding-block: 16px 40px;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-.wrap { max-width: 520px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
-h1 { font: 700 26px/1 var(--font-display); letter-spacing: .02em; text-transform: uppercase; margin: 0; }
-.sub { color: var(--muted); font-size: 14px; margin: 4px 0 0; }
-.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px; }
-.top { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
-.clock { font: 500 30px/1 var(--font-mono); font-variant-numeric: tabular-nums; }
-.clock small { display: block; font: 500 11px var(--font-body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
-button { font: inherit; color: inherit; cursor: pointer; }
-button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid var(--arrive); outline-offset: 2px; }
-.btn { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 10px 14px; font-weight: 600; min-height: 44px; }
-.btn.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-.btn.danger { color: var(--alert); border-color: var(--alert); }
-.btn:disabled { opacity: .45; cursor: not-allowed; }
-.tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
-.tab { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 10px 6px; font: 600 15px var(--font-display); letter-spacing: .06em; text-transform: uppercase; min-height: 44px; }
-.tab[aria-selected="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-details summary { cursor: pointer; font-weight: 600; min-height: 28px; }
-.fields { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
-.fields label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); min-width: 0; }
-.fields .wide { grid-column: 1 / -1; }
-input, select { font: 500 16px var(--font-body); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 9px 10px; min-height: 44px; width: 100%; min-width: 0; }
-.big { width: 100%; border: 0; border-radius: 14px; min-height: 190px; font: 700 40px/1.05 var(--font-display); text-transform: uppercase; letter-spacing: .03em; color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; touch-action: manipulation; user-select: none; }
-.big span { font: 500 14px var(--font-body); text-transform: none; letter-spacing: 0; opacity: .9; }
-.big.arrive { background: var(--arrive); }
-.big.serve { background: var(--serve); }
-.big:active { transform: scale(.985); }
-.big:disabled { opacity: .4; }
-.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-.stat { border-left: 3px solid var(--line); padding-left: 10px; }
-.stat b { display: block; font: 700 30px/1 var(--font-display); font-variant-numeric: tabular-nums; }
-.stat i { font-style: normal; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
-.bars { display: flex; align-items: flex-end; gap: 4px; height: 70px; margin-top: 12px; }
-.bar { flex: 1; min-width: 0; background: var(--arrive); border-radius: 3px 3px 0 0; position: relative; min-height: 3px; opacity: .85; }
-.bar.now { opacity: 1; outline: 2px solid var(--ink); outline-offset: 1px; }
-.axis { display: flex; justify-content: space-between; font: 11px var(--font-mono); color: var(--muted); margin-top: 4px; }
-.hint { color: var(--muted); font-size: 14px; margin: 0; }
-.due { border-color: var(--alert); box-shadow: 0 0 0 2px var(--alert) inset; }
-.due .dueTxt { color: var(--alert); font-weight: 600; }
-@media (prefers-reduced-motion: no-preference) { .due { animation: pulse 1s ease-in-out infinite; } }
-@keyframes pulse { 50% { box-shadow: 0 0 0 4px var(--alert) inset; } }
-.stepper { display: grid; grid-template-columns: 76px 1fr 76px; gap: 10px; align-items: center; margin: 12px 0; }
-.stepper button { min-height: 76px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); font: 700 40px var(--font-display); touch-action: manipulation; }
-.nval { text-align: center; font: 700 76px/1 var(--font-display); font-variant-numeric: tabular-nums; }
-.nval small { display: block; font: 500 12px var(--font-body); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
-.sw { font: 500 44px/1 var(--font-mono); font-variant-numeric: tabular-nums; text-align: center; margin: 6px 0 12px; }
-.row { display: flex; gap: 8px; flex-wrap: wrap; }
-.row > * { flex: 1 1 140px; }
-.log { font: 13px/1.6 var(--font-mono); margin: 0; padding: 0; list-style: none; }
-.log li { display: flex; justify-content: space-between; gap: 8px; border-bottom: 1px dashed var(--line); padding: 2px 0; }
-.tag-desistencia { color: var(--alert); }
-.tag-chegada { color: var(--arrive); } .tag-fila, .tag-atendimento { color: var(--serve); }
-textarea { width: 100%; min-height: 150px; font: 12px/1.5 var(--font-mono); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px; resize: vertical; }
-h2 { font: 700 18px/1 var(--font-display); text-transform: uppercase; letter-spacing: .05em; margin: 0 0 10px; }
-.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 8px; font-weight: 600; z-index: 20; }
-[hidden] { display: none !important; }
-body { margin: 0; }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -138,7 +46,7 @@ body { margin: 0; }
       <button class="btn primary" id="btn-start">Iniciar coleta</button>
       <button class="btn" id="btn-stop" disabled>Encerrar</button>
     </div>
-    <p class="hint" style="margin-top:10px">Os dois observadores tocam em Iniciar juntos. O relógio de cada celular grava o horário exato de cada toque.</p>
+    <p class="hint mt-10">Os dois observadores tocam em Iniciar juntos. O relógio de cada celular grava o horário exato de cada toque.</p>
   </section>
 
   <nav class="tabs" role="tablist" aria-label="Telas">
@@ -149,9 +57,9 @@ body { margin: 0; }
 
   <section id="p-chegadas" class="panel" role="tabpanel" aria-labelledby="t-chegadas">
     <button class="big arrive" id="btn-chegou" disabled>Chegou aluno<span>toque quando alguém entrar no fim da fila</span></button>
-    <button class="btn danger" id="btn-saiu" disabled style="width:100%;margin-top:10px">Alguém saiu da fila sem passar</button>
-    <p class="hint" style="margin-top:8px">Só conta quem já tinha entrado na fila (e foi contado em Chegou aluno). Saíram até agora: <b id="s-saiu">0</b></p>
-    <div class="stats" style="margin-top:14px">
+    <button class="btn danger full-width mt-10" id="btn-saiu" disabled>Alguém saiu da fila sem passar</button>
+    <p class="hint mt-8">Só conta quem já tinha entrado na fila (e foi contado em Chegou aluno). Saíram até agora: <b id="s-saiu">0</b></p>
+    <div class="stats mt-14">
       <div class="stat"><b id="s-total">0</b><i>total</i></div>
       <div class="stat"><b id="s-min">0</b><i>neste minuto</i></div>
       <div class="stat"><b id="s-media">0,0</b><i>média por min</i></div>
@@ -160,7 +68,7 @@ body { margin: 0; }
     <div class="axis"><span>12 min atrás</span><span>agora</span></div>
   </section>
 
-  <section id="p-fila" role="tabpanel" aria-labelledby="t-fila" hidden style="display:flex;flex-direction:column;gap:14px">
+  <section id="p-fila" role="tabpanel" aria-labelledby="t-fila" class="tab-panel" hidden>
     <div class="panel" id="fila-card">
       <h2>Fila, minuto a minuto</h2>
       <p class="hint"><span class="dueTxt" id="due-txt">Inicie a coleta para começar a contar o tempo.</span></p>
@@ -169,17 +77,17 @@ body { margin: 0; }
         <div class="nval"><span id="n-val">0</span><small>alunos na fila + catraca</small></div>
         <button id="n-plus" aria-label="Mais um">+</button>
       </div>
-      <button class="btn primary" id="btn-fila" style="width:100%" disabled>Anotar fila</button>
+      <button class="btn primary full-width" id="btn-fila" disabled>Anotar fila</button>
     </div>
     <div class="panel">
       <h2>Atendimento na catraca</h2>
       <div class="sw" id="sw">0,00 s</div>
-      <button class="big serve" id="btn-sw" style="min-height:120px;font-size:30px" disabled>Começou a passar<span>toque quando o aluno chegar na catraca</span></button>
-      <p class="hint" style="margin-top:10px"><b id="s-atend">0</b> de 20 a 30 atendimentos cronometrados. <button class="btn" id="btn-sw-cancel" hidden style="min-height:32px;padding:4px 10px;margin-left:6px">Descartar</button></p>
+      <button class="big serve serve-small" id="btn-sw" disabled>Começou a passar<span>toque quando o aluno chegar na catraca</span></button>
+      <p class="hint mt-10"><b id="s-atend">0</b> de 20 a 30 atendimentos cronometrados. <button class="btn cancel-button" id="btn-sw-cancel" hidden>Descartar</button></p>
     </div>
   </section>
 
-  <section id="p-dados" role="tabpanel" aria-labelledby="t-dados" hidden style="display:flex;flex-direction:column;gap:14px">
+  <section id="p-dados" role="tabpanel" aria-labelledby="t-dados" class="tab-panel" hidden>
     <div class="panel">
       <h2>Resumo deste celular</h2>
       <div class="stats">
@@ -190,9 +98,9 @@ body { margin: 0; }
     </div>
     <div class="panel">
       <h2>CSV para o script</h2>
-      <p class="hint" style="margin-bottom:10px">Copie, cole num arquivo .csv e passe os dois arquivos (A e B) para o script de análise.</p>
+      <p class="hint mb-10">Copie, cole num arquivo .csv e passe os dois arquivos (A e B) para o script de análise.</p>
       <textarea id="csv" readonly aria-label="Dados em CSV"></textarea>
-      <div class="row" style="margin-top:10px">
+      <div class="row mt-10">
         <button class="btn primary" id="btn-copy">Copiar CSV</button>
         <button class="btn" id="btn-undo">Desfazer último</button>
         <button class="btn danger" id="btn-clear">Apagar tudo</button>
@@ -206,182 +114,6 @@ body { margin: 0; }
 </main>
 <div class="toast" id="toast" hidden></div>
 
-<script>
-(function () {
-  var $ = function (id) { return document.getElementById(id); };
-  var KEY = 'catraca-ru-coleta-v1';
-  var pad = function (n) { return String(n).padStart(2, '0'); };
-  /* Horário sempre no fuso de Brasília (America/Sao_Paulo, UTC-03:00), mesmo que o celular esteja em outro fuso. */
-  var dtf = null;
-  try { dtf = new Intl.DateTimeFormat('en-GB', { timeZone: 'America/Sao_Paulo', hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' }); } catch (e) {}
-  function parts(t) {
-    var d = new Date(t), o = {}, ms = String(d.getMilliseconds()).padStart(3, '0');
-    if (dtf) {
-      dtf.formatToParts(d).forEach(function (p) { o[p.type] = p.value; });
-      return { y: o.year, mo: o.month, d: o.day, h: o.hour === '24' ? '00' : o.hour, mi: o.minute, s: o.second, ms: ms, off: '-03:00' };
-    }
-    return { y: d.getFullYear(), mo: pad(d.getMonth() + 1), d: pad(d.getDate()), h: pad(d.getHours()), mi: pad(d.getMinutes()), s: pad(d.getSeconds()), ms: ms, off: '' };
-  }
-  function today() { var p = parts(Date.now()); return p.y + '-' + p.mo + '-' + p.d; }
-  var S = { meta: { sessao: today() + '-almoco', refeicao: 'almoco', catracas: 1, obs: 'A' }, events: [], inicio: null, fim: null, n: 0 };
-  try { var raw = localStorage.getItem(KEY); if (raw) { var p = JSON.parse(raw); S = Object.assign(S, p); S.meta = Object.assign({ sessao: today() + '-almoco', refeicao: 'almoco', catracas: 1, obs: 'A' }, p.meta || {}); } } catch (e) {}
-  function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
-
-  var audioCtx = null;
-  function beep() {
-    try {
-      audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
-      var o = audioCtx.createOscillator(), g = audioCtx.createGain();
-      o.frequency.value = 880; g.gain.value = 0.15; o.connect(g); g.connect(audioCtx.destination);
-      o.start(); o.stop(audioCtx.currentTime + 0.18);
-    } catch (e) {}
-    try { if (navigator.vibrate) navigator.vibrate(150); } catch (e) {}
-  }
-  var toastTimer;
-  function toast(msg) { var t = $('toast'); t.textContent = msg; t.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(function () { t.hidden = true; }, 1600); }
-
-  function running() { return S.inicio && !S.fim; }
-  function elapsedSec() { return S.inicio ? ((S.fim || Date.now()) - S.inicio) / 1000 : 0; }
-  function fmt(sec) { sec = Math.floor(sec); return Math.floor(sec / 60) + ':' + pad(sec % 60); }
-  function bin(t) { return Math.floor((t - S.inicio) / 60000); }
-  function add(tipo, valor) {
-    S.events.push({ tipo: tipo, t: Date.now(), valor: (valor === undefined ? '' : valor) });
-    save(); render();
-  }
-  function count(tipo) { return S.events.filter(function (e) { return e.tipo === tipo; }).length; }
-
-  /* Sessão */
-  $('f-sessao').value = S.meta.sessao; $('f-refeicao').value = S.meta.refeicao; $('f-catracas').value = S.meta.catracas; $('f-obs').value = S.meta.obs;
-  $('f-sessao').addEventListener('input', function (e) { S.meta.sessao = e.target.value.trim(); save(); renderCsv(); });
-  $('f-refeicao').addEventListener('change', function (e) { S.meta.refeicao = e.target.value; S.meta.sessao = today() + '-' + e.target.value; $('f-sessao').value = S.meta.sessao; save(); renderCsv(); });
-  $('f-catracas').addEventListener('input', function (e) { S.meta.catracas = Math.max(1, parseInt(e.target.value, 10) || 1); save(); renderCsv(); });
-  $('f-obs').addEventListener('change', function (e) { S.meta.obs = e.target.value; save(); renderCsv(); showTab(S.meta.obs === 'A' ? 'chegadas' : 'fila'); });
-
-  /* Início e fim */
-  $('btn-start').addEventListener('click', function () {
-    if (S.events.length && !confirmStart) { confirmStart = true; $('btn-start').textContent = 'Há dados: toque de novo para recomeçar'; setTimeout(function () { confirmStart = false; render(); }, 3000); return; }
-    confirmStart = false; S.events = []; S.inicio = Date.now(); S.fim = null; S.n = 0; lastBin = 0;
-    S.events.push({ tipo: 'inicio', t: S.inicio, valor: '' });
-    $('setup').open = false; beep(); save(); render();
-  });
-  var confirmStart = false;
-  $('btn-stop').addEventListener('click', function () { if (!running()) return; S.fim = Date.now(); S.events.push({ tipo: 'fim', t: S.fim, valor: '' }); save(); render(); toast('Coleta encerrada'); showTab('dados'); });
-
-  /* Chegadas */
-  $('btn-chegou').addEventListener('click', function () { if (!running()) return; add('chegada'); try { if (navigator.vibrate) navigator.vibrate(30); } catch (e) {} });
-
-  $('btn-saiu').addEventListener('click', function () { if (!running()) return; add('desistencia'); toast('Saída da fila anotada'); });
-
-  /* Fila */
-  $('n-minus').addEventListener('click', function () { S.n = Math.max(0, S.n - 1); save(); renderN(); });
-  $('n-plus').addEventListener('click', function () { S.n += 1; save(); renderN(); });
-  $('btn-fila').addEventListener('click', function () { if (!running()) return; add('fila', S.n); toast('Fila anotada: ' + S.n); });
-  function renderN() { $('n-val').textContent = S.n; $('btn-fila').textContent = 'Anotar fila (' + S.n + ')'; }
-
-  /* Cronômetro de atendimento */
-  var sw = { on: false, t0: 0 };
-  $('btn-sw').addEventListener('click', function () {
-    if (!running()) return;
-    if (!sw.on) { sw.on = true; sw.t0 = performance.now(); }
-    else { var d = (performance.now() - sw.t0) / 1000; sw.on = false; add('atendimento', d.toFixed(2)); toast('Atendimento: ' + d.toFixed(1).replace('.', ',') + ' s'); }
-    renderSw();
-  });
-  $('btn-sw-cancel').addEventListener('click', function () { sw.on = false; renderSw(); });
-  function renderSw() {
-    var b = $('btn-sw');
-    b.firstChild.nodeValue = sw.on ? 'Passou' : 'Começou a passar';
-    b.querySelector('span').textContent = sw.on ? 'toque quando o aluno passar pela catraca' : 'toque quando o aluno chegar na catraca';
-    $('btn-sw-cancel').hidden = !sw.on;
-    if (!sw.on) $('sw').textContent = '0,00 s';
-  }
-
-  /* Dados */
-  function csvText() {
-    var m = S.meta, lines = ['sessao,data,refeicao,catracas,observador,tipo,instante_iso,t_seg,valor'];
-    S.events.forEach(function (e) {
-      var q = parts(e.t);
-      var iso = q.y + '-' + q.mo + '-' + q.d + 'T' + q.h + ':' + q.mi + ':' + q.s + '.' + q.ms + q.off;
-      var ts = S.inicio ? ((e.t - S.inicio) / 1000).toFixed(1) : '';
-      lines.push([m.sessao.replace(/,/g, ' '), today(), m.refeicao, m.catracas, m.obs, e.tipo, iso, ts, e.valor].join(','));
-    });
-    return lines.join('\n');
-  }
-  function renderCsv() { $('csv').value = csvText(); }
-  $('btn-copy').addEventListener('click', function () {
-    var ta = $('csv'); ta.focus(); ta.select();
-    var done = function () { toast('CSV copiado'); };
-    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(ta.value).then(done, function () { try { document.execCommand('copy'); done(); } catch (e) { toast('Selecionado: copie manualmente'); } });
-    else { try { document.execCommand('copy'); done(); } catch (e) { toast('Selecionado: copie manualmente'); } }
-  });
-  $('btn-undo').addEventListener('click', function () {
-    var e = S.events.pop(); if (!e) return;
-    if (e.tipo === 'inicio') { S.inicio = null; S.fim = null; }
-    if (e.tipo === 'fim') { S.fim = null; }
-    save(); render(); toast('Removido: ' + e.tipo);
-  });
-  var clearArmed = false;
-  $('btn-clear').addEventListener('click', function () {
-    if (!clearArmed) { clearArmed = true; $('btn-clear').textContent = 'Toque de novo para apagar'; setTimeout(function () { clearArmed = false; $('btn-clear').textContent = 'Apagar tudo'; }, 3000); return; }
-    clearArmed = false; S.events = []; S.inicio = null; S.fim = null; S.n = 0; sw.on = false; save(); render(); renderSw(); $('btn-clear').textContent = 'Apagar tudo'; toast('Dados apagados');
-  });
-
-  /* Abas */
-  function showTab(name) {
-    ['chegadas', 'fila', 'dados'].forEach(function (k) {
-      var sel = k === name; $('t-' + k).setAttribute('aria-selected', sel);
-      var p = $('p-' + k); p.hidden = !sel;
-    });
-  }
-  document.querySelectorAll('.tab').forEach(function (b) { b.addEventListener('click', function () { showTab(b.dataset.tab); }); });
-
-  /* Renderização */
-  function render() {
-    var on = running();
-    $('btn-start').textContent = on ? 'Coleta em andamento' : (S.inicio ? 'Nova coleta' : 'Iniciar coleta');
-    $('btn-start').disabled = on;
-    $('btn-stop').disabled = !on;
-    ['btn-chegou', 'btn-saiu', 'btn-fila', 'btn-sw'].forEach(function (id) { $(id).disabled = !on; });
-    var total = count('chegada');
-    $('s-saiu').textContent = count('desistencia');
-    $('s-total').textContent = total; $('d-ch').textContent = total; $('d-fi').textContent = count('fila');
-    var at = count('atendimento'); $('s-atend').textContent = at; $('d-at').textContent = at;
-    var nbins = 12, counts = new Array(nbins).fill(0), cur = S.inicio ? bin(S.fim || Date.now()) : 0;
-    if (S.inicio) S.events.forEach(function (e) { if (e.tipo === 'chegada') { var i = nbins - 1 - (cur - bin(e.t)); if (i >= 0 && i < nbins) counts[i]++; } });
-    var mx = Math.max.apply(null, counts.concat([4])), html = '';
-    counts.forEach(function (c, i) { html += '<div class="bar' + (i === nbins - 1 ? ' now' : '') + '" style="height:' + Math.max(4, (c / mx) * 100) + '%" title="' + c + '"></div>'; });
-    $('bars').innerHTML = html;
-    $('s-min').textContent = counts[nbins - 1];
-    var mins = elapsedSec() / 60; $('s-media').textContent = (mins >= 1 ? (total / mins) : total).toFixed(1).replace('.', ',');
-    renderN(); renderCsv();
-    var ul = $('log'); ul.innerHTML = '';
-    S.events.slice(-8).reverse().forEach(function (e) {
-      var li = document.createElement('li'), q = parts(e.t);
-      var a = document.createElement('span'); a.className = 'tag-' + e.tipo; a.textContent = e.tipo + (e.valor !== '' ? ' · ' + e.valor : '');
-      var b = document.createElement('span'); b.textContent = q.h + ':' + q.mi + ':' + q.s;
-      li.appendChild(a); li.appendChild(b); ul.appendChild(li);
-    });
-    tick();
-  }
-
-  var lastBin = 0;
-  function tick() {
-    $('clock').textContent = fmt(elapsedSec());
-    var now = parts(Date.now()); $('tod').textContent = now.h + ':' + now.mi + ':' + now.s;
-    if (sw.on) $('sw').textContent = ((performance.now() - sw.t0) / 1000).toFixed(2).replace('.', ',') + ' s';
-    var card = $('fila-card'), txt = $('due-txt');
-    if (!running()) { card.classList.remove('due'); txt.textContent = S.inicio ? 'Coleta encerrada.' : 'Inicie a coleta para começar a contar o tempo.'; return; }
-    var b = bin(Date.now());
-    var done = S.events.some(function (e) { return e.tipo === 'fila' && bin(e.t) === b; });
-    if (b !== lastBin) { lastBin = b; if (S.meta.obs === 'B' && !done) beep(); }
-    card.classList.toggle('due', !done);
-    var left = 60 - (elapsedSec() % 60);
-    txt.textContent = done ? 'Anotado no minuto ' + b + '. Próximo em ' + fmt(left) + '.' : 'Minuto ' + b + ': anote a fila agora.';
-  }
-  setInterval(tick, 250);
-  showTab(S.meta.obs === 'A' ? 'chegadas' : 'fila');
-  render(); renderSw();
-  if (S.inicio) $('setup').open = false;
-})();
-</script>
+<script src="app.js"></script>
 </body>
 </html>
