@@ -9,16 +9,16 @@ e faz o que o checklist da Aula 10 pede:
   2. modela: fórmulas M/M/1 (Aula 03) para cada trecho
   3. simula: cadeia de Markov com passo de 5 s (slides 9 e 10), K = 50
   4. verifica: simulador x fórmulas num trecho sem pico (slide 19)
-  5. valida : fila anotada minuto a minuto x fila simulada (slide 22)
+  5. valida : fila reconstruída a partir dos eventos x fila simulada (slide 22)
   6. compara cenários com a mesma semente: 1 catraca, 2ª só no pico, 2 a hora toda
   7. aponta o gargalo (use --fila para incluir ticket, suco etc.)
 
 Uso:
-  python3 analise_catraca.py A_dia1.csv B_dia1.csv A_dia2.csv B_dia2.csv
+  python3 analise_catraca.py A_dia1.csv B_dia1.csv C_dia1.csv
   python3 analise_catraca.py *.csv --limiar 3.0 --K 50 --reps 30 --seed 42
   python3 analise_catraca.py *.csv --fila ticket 1.8 3.0 --fila suco 1.2 2.0
 
-Os arquivos dos dois observadores são juntados pelo nome da sessão.
+Os arquivos dos três observadores são juntados pelo nome da sessão.
 Só precisa de Python 3. Os gráficos (PNG) saem se o matplotlib estiver instalado.
 """
 import argparse
@@ -29,7 +29,7 @@ import random
 import statistics
 import sys
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, timedelta
 
 T975 = {1: 12.706, 2: 4.303, 3: 3.182, 4: 2.776, 5: 2.571, 6: 2.447, 7: 2.365, 8: 2.306,
         9: 2.262, 10: 2.228, 12: 2.179, 15: 2.131, 20: 2.086, 25: 2.060, 30: 2.042}
@@ -77,7 +77,11 @@ def P(texto=''):
 
 # ---------------------------------------------------------------- leitura
 def ler(arquivos):
-    sess = defaultdict(lambda: {'inicio': [], 'fim': [], 'chegada': [], 'desist': [], 'fila': [], 'atend': [], 'catracas': 1})
+    sess = defaultdict(lambda: {
+        'inicio': [], 'fim': [], 'chegada': [], 'desist': [], 'fila': [],
+        'atend': [], 'inicio_atend': [], 'saida_atend': [], 'n0': None,
+        'catracas': 1,
+    })
     for caminho in arquivos:
         with open(caminho, newline='', encoding='utf-8-sig') as f:
             for r in csv.DictReader(f):
@@ -97,6 +101,11 @@ def ler(arquivos):
                     pass
                 if tipo == 'inicio':
                     s['inicio'].append(t)
+                    if r.get('valor', '').strip():
+                        try:
+                            s['n0'] = int(float(r['valor']))
+                        except ValueError:
+                            pass
                 elif tipo == 'fim':
                     s['fim'].append(t)
                 elif tipo == 'chegada':
@@ -107,11 +116,19 @@ def ler(arquivos):
                     s['fila'].append((t, int(float(r['valor']))))
                 elif tipo == 'atendimento':
                     s['atend'].append(float(r['valor']))
+                elif tipo == 'inicio_atend':
+                    s['inicio_atend'].append(t)
+                elif tipo == 'saida_atend':
+                    s['saida_atend'].append(t)
     return sess
 
 
 def preparar(nome, s):
-    todos = s['inicio'] + s['fim'] + s['chegada'] + s['desist'] + [t for t, _ in s['fila']]
+    todos = (
+        s['inicio'] + s['fim'] + s['chegada'] + s['desist']
+        + s['inicio_atend'] + s['saida_atend']
+        + [t for t, _ in s['fila']]
+    )
     if not todos:
         return None
     t0 = min(s['inicio']) if s['inicio'] else min(todos)
@@ -129,7 +146,36 @@ def preparar(nome, s):
             des[m] += 1
     fila = sorted(((t - t0).total_seconds(), n) for t, n in s['fila'])
     fila = [(sec, n) for sec, n in fila if 0 <= sec < T * 60]
-    return {'nome': nome, 'T': T, 'arr': arr, 'des': des, 'fila': fila, 'atend': s['atend'], 'catracas': s['catracas']}
+    if not fila and (
+        s['n0'] is not None or s['inicio_atend'] or s['saida_atend']
+    ):
+        n = max(0, s['n0'] or 0)
+        eventos = sorted(
+            [(t, 1) for t in s['chegada']]
+            + [(t, -1) for t in s['desist']]
+            + [(t, -1) for t in s['saida_atend']]
+        )
+        pos = 0
+        fila = []
+        for minuto in range(T):
+            limite = t0 + timedelta(minutes=minuto)
+            while pos < len(eventos) and eventos[pos][0] <= limite:
+                n = max(0, n + eventos[pos][1])
+                pos += 1
+            fila.append((minuto * 60, n))
+
+    atend = list(s['atend'])
+    inicios = sorted(s['inicio_atend'])
+    saidas = sorted(s['saida_atend'])
+    atend.extend(
+        (fim - inicio).total_seconds()
+        for inicio, fim in zip(inicios, saidas)
+        if fim >= inicio
+    )
+    return {
+        'nome': nome, 'T': T, 'arr': arr, 'des': des, 'fila': fila,
+        'atend': atend, 'catracas': s['catracas'],
+    }
 
 
 # ---------------------------------------------------------------- modelo
@@ -325,8 +371,8 @@ def analisar(d, mu, args, pasta):
         Ls = [sum(h[i] for i in idx) / len(idx) for h in base['hs']]
         ps = [max(h[i] for i in idx) for h in base['hs']]
         gs = [sum(1 for i in idx if h[i] >= 10) / len(idx) for h in base['hs']]
-        P(f'VALIDAÇÃO (slide 22): fila anotada ({len(anot)} anotações) x simulada nos mesmos instantes')
-        P(f'  {"":<22}{"anotada":>10}{"simulada (média)":>18}{"faixa 5%-95%":>16}{"dentro?":>9}')
+        P(f'VALIDAÇÃO (slide 22): fila reconstruída ({len(anot)} amostras) x simulada nos mesmos instantes')
+        P(f'  {"":<22}{"observada":>10}{"simulada (média)":>18}{"faixa 5%-95%":>16}{"dentro?":>9}')
         for rot, a, sim, d1 in (('L (alunos em média)', La, Ls, 1), ('pior momento', pa, ps, 0), ('fração com fila ≥ 10', ga, gs, 2)):
             lo, hi = percentil(sim, .05), percentil(sim, .95)
             ok = 'sim' if lo <= a <= hi else 'NÃO'
@@ -336,7 +382,7 @@ def analisar(d, mu, args, pasta):
                 P(f'  {rot:<22}{br(a, d1):>10}{br(sum(sim) / len(sim), d1):>18}{br(lo, d1) + "-" + br(hi, d1):>16}{ok:>9}')
         P('  Se algum ficar fora da faixa, revejam primeiro as medições: contagens, separação calma/pico e os atendimentos cronometrados.')
     else:
-        P('VALIDAÇÃO: sem fila anotada minuto a minuto nesta sessão.')
+        P('VALIDAÇÃO: sem dados suficientes para reconstruir a fila nesta sessão.')
 
     # conclusão
     P('')
@@ -373,9 +419,9 @@ def grafico(d, pico, res, args, pasta):
     ax[0].step(xs, base[0], color='tab:blue', lw=.8, alpha=.7, label='1 réplica simulada')
     ax[0].plot(xs, media, color='navy', lw=2, label='média das réplicas (1 catraca)')
     if d['fila']:
-        ax[0].scatter([s / 60 for s, _ in d['fila']], [n for _, n in d['fila']], color='black', zorder=5, s=22, label='fila anotada')
+        ax[0].scatter([s / 60 for s, _ in d['fila']], [n for _, n in d['fila']], color='black', zorder=5, s=22, label='fila reconstruída')
     ax[0].set_ylabel('alunos no sistema')
-    ax[0].set_title(f'Validação: anotada x simulada ({d["nome"]}; faixa rosa = pico)')
+    ax[0].set_title(f'Validação: reconstruída x simulada ({d["nome"]}; faixa rosa = pico)')
     ax[0].legend(loc='upper left', fontsize=8)
     cores = {'1 catraca': 'tab:blue', '2ª só no pico': 'tab:green', '2 a hora toda': 'tab:orange', '1 cat. sem desist.': 'tab:gray'}
     for nome, r in res.items():

@@ -23,7 +23,7 @@
   <details class="panel" id="setup" open>
     <summary>Sessão e observador</summary>
     <div class="fields">
-      <label class="wide">Nome da sessão (igual nos dois celulares)
+      <label class="wide">Nome da sessão (igual nos três celulares)
         <input id="f-sessao" type="text" autocomplete="off">
       </label>
       <label>Refeição
@@ -32,34 +32,39 @@
       <label>Catracas abertas
         <input id="f-catracas" type="number" min="1" max="4" inputmode="numeric">
       </label>
-      <label class="wide">Quem está observando
+      <label>Alunos no sistema ao iniciar (fila + catraca)
+        <input id="f-n0" type="number" min="0" inputmode="numeric">
+      </label>
+      <label>Quem está observando
         <select id="f-obs">
-          <option value="A">A · conta chegadas</option>
-          <option value="B">B · fila e atendimento</option>
+          <option value="A">A · entrada na fila</option>
+          <option value="B">B · início do atendimento</option>
+          <option value="C">C · saída do atendimento</option>
         </select>
       </label>
     </div>
   </details>
 
   <section class="panel">
-    <div class="row">
-      <button class="btn primary" id="btn-start">Iniciar coleta</button>
-      <button class="btn" id="btn-stop" disabled>Encerrar</button>
+    <div class="row" style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn primary" id="btn-start" style="flex:1 1 140px">Iniciar coleta</button>
+      <button class="btn" id="btn-stop" disabled style="flex:1 1 140px">Encerrar</button>
     </div>
-    <p class="hint mt-10">Os dois observadores tocam em Iniciar juntos. O relógio de cada celular grava o horário exato de cada toque.</p>
+    <p class="hint" style="margin-top:10px">Os três observadores tocam em Iniciar juntos. O relógio de cada celular grava o horário exato de cada toque. A fila é calculada depois: entradas menos desistências e saídas.</p>
   </section>
 
   <nav class="tabs" role="tablist" aria-label="Telas">
     <button class="tab" role="tab" id="t-chegadas" aria-selected="true" data-tab="chegadas">Chegadas</button>
     <button class="tab" role="tab" id="t-fila" aria-selected="false" data-tab="fila">Fila</button>
+    <button class="tab" role="tab" id="t-saida" aria-selected="false" data-tab="saida">Saída</button>
     <button class="tab" role="tab" id="t-dados" aria-selected="false" data-tab="dados">Dados</button>
   </nav>
 
   <section id="p-chegadas" class="panel" role="tabpanel" aria-labelledby="t-chegadas">
     <button class="big arrive" id="btn-chegou" disabled>Chegou aluno<span>toque quando alguém entrar no fim da fila</span></button>
-    <button class="btn danger full-width mt-10" id="btn-saiu" disabled>Alguém saiu da fila sem passar</button>
-    <p class="hint mt-8">Só conta quem já tinha entrado na fila (e foi contado em Chegou aluno). Saíram até agora: <b id="s-saiu">0</b></p>
-    <div class="stats mt-14">
+    <button class="btn danger" id="btn-saiu" disabled style="width:100%;margin-top:10px">Alguém saiu da fila sem passar</button>
+    <p class="hint" style="margin-top:8px">Só conta quem já tinha entrado na fila (e foi contado em Chegou aluno). Saíram até agora: <b id="s-saiu">0</b></p>
+    <div class="stats" style="margin-top:14px">
       <div class="stat"><b id="s-total">0</b><i>total</i></div>
       <div class="stat"><b id="s-min">0</b><i>neste minuto</i></div>
       <div class="stat"><b id="s-media">0,0</b><i>média por min</i></div>
@@ -68,46 +73,58 @@
     <div class="axis"><span>12 min atrás</span><span>agora</span></div>
   </section>
 
-  <section id="p-fila" role="tabpanel" aria-labelledby="t-fila" class="tab-panel" hidden>
-    <div class="panel" id="fila-card">
-      <h2>Fila, minuto a minuto</h2>
-      <p class="hint"><span class="dueTxt" id="due-txt">Inicie a coleta para começar a contar o tempo.</span></p>
-      <div class="stepper">
-        <button id="n-minus" aria-label="Menos um">−</button>
-        <div class="nval"><span id="n-val">0</span><small>alunos na fila + catraca</small></div>
-        <button id="n-plus" aria-label="Mais um">+</button>
-      </div>
-      <button class="btn primary full-width" id="btn-fila" disabled>Anotar fila</button>
+  <section id="p-fila" class="panel" role="tabpanel" aria-labelledby="t-fila" hidden>
+    <button class="big serve" id="btn-ini" disabled>Começou a ser atendido<span>toque quando o aluno chegar na catraca</span></button>
+    <div class="stats" style="margin-top:14px">
+      <div class="stat"><b id="f-total">0</b><i>total</i></div>
+      <div class="stat"><b id="f-min">0</b><i>neste minuto</i></div>
+      <div class="stat"><b id="f-media">0,0</b><i>média por min</i></div>
     </div>
-    <div class="panel">
-      <h2>Atendimento na catraca</h2>
-      <div class="sw" id="sw">0,00 s</div>
-      <button class="big serve serve-small" id="btn-sw" disabled>Começou a passar<span>toque quando o aluno chegar na catraca</span></button>
-      <p class="hint mt-10"><b id="s-atend">0</b> de 20 a 30 atendimentos cronometrados. <button class="btn cancel-button" id="btn-sw-cancel" hidden>Descartar</button></p>
-    </div>
+    <div class="bars serve" id="f-bars" aria-label="Inícios de atendimento por minuto"></div>
+    <div class="axis"><span>12 min atrás</span><span>agora</span></div>
   </section>
 
-  <section id="p-dados" role="tabpanel" aria-labelledby="t-dados" class="tab-panel" hidden>
+  <section id="p-saida" class="panel" role="tabpanel" aria-labelledby="t-saida" hidden>
+    <button class="big leave" id="btn-fim" disabled>Saiu do atendimento<span>toque quando o aluno passar pela catraca</span></button>
+    <div class="stats" style="margin-top:14px">
+      <div class="stat"><b id="x-total">0</b><i>total</i></div>
+      <div class="stat"><b id="x-min">0</b><i>neste minuto</i></div>
+      <div class="stat"><b id="x-media">0,0</b><i>média por min</i></div>
+    </div>
+    <div class="bars leave" id="x-bars" aria-label="Saídas por minuto"></div>
+    <div class="axis"><span>12 min atrás</span><span>agora</span></div>
+  </section>
+
+  <section id="p-dados" class="stack" role="tabpanel" aria-labelledby="t-dados" hidden>
     <div class="panel">
       <h2>Resumo deste celular</h2>
-      <div class="stats">
+      <div class="stats four">
         <div class="stat"><b id="d-ch">0</b><i>chegadas</i></div>
-        <div class="stat"><b id="d-fi">0</b><i>filas</i></div>
-        <div class="stat"><b id="d-at">0</b><i>atendimentos</i></div>
+        <div class="stat"><b id="d-de">0</b><i>saíram da fila</i></div>
+        <div class="stat"><b id="d-in">0</b><i>inícios de atendimento</i></div>
+        <div class="stat"><b id="d-sa">0</b><i>saídas do atendimento</i></div>
       </div>
     </div>
     <div class="panel">
       <h2>CSV para o script</h2>
-      <p class="hint mb-10">Copie, cole num arquivo .csv e passe os dois arquivos (A e B) para o script de análise.</p>
+      <p class="hint" style="margin-bottom:10px">Copie, cole num arquivo .csv e passe os três arquivos (A, B e C) para o script de análise.</p>
       <textarea id="csv" readonly aria-label="Dados em CSV"></textarea>
-      <div class="row mt-10">
-        <button class="btn primary" id="btn-copy">Copiar CSV</button>
-        <button class="btn" id="btn-undo">Desfazer último</button>
-        <button class="btn danger" id="btn-clear">Apagar tudo</button>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+        <button class="btn primary" id="btn-copy" style="flex:1 1 140px">Copiar CSV</button>
+        <button class="btn" id="btn-undo" style="flex:1 1 140px">Desfazer último</button>
+        <button class="btn danger" id="btn-clear" style="flex:1 1 140px">Apagar tudo</button>
       </div>
     </div>
     <div class="panel">
-      <h2>Últimos registros</h2>
+      <h2>Registros deste celular</h2>
+      <div class="chips" id="chips" role="group" aria-label="Filtrar registros">
+        <button class="chip" data-f="todos" aria-pressed="true">Todos <b id="c-todos">0</b></button>
+        <button class="chip" data-f="chegada" aria-pressed="false">Chegadas <b id="c-chegada">0</b></button>
+        <button class="chip" data-f="desistencia" aria-pressed="false">Saíram da fila <b id="c-desistencia">0</b></button>
+        <button class="chip" data-f="inicio_atend" aria-pressed="false">Inícios <b id="c-inicio_atend">0</b></button>
+        <button class="chip" data-f="saida_atend" aria-pressed="false">Saídas do atendimento <b id="c-saida_atend">0</b></button>
+      </div>
+      <p class="hint" style="margin:10px 0">Cada celular mostra só o que foi tocado nele. A saída do atendimento aparece no celular do observador C.</p>
       <ul class="log" id="log"></ul>
     </div>
   </section>
