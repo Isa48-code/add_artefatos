@@ -1,0 +1,43 @@
+ATENDIMENTO NA CATRACA (todas as sessões juntas)
+  409 atendimentos cronometrados: média 8,4 s, desvio 12,6 s, CV = 1,50 (exponencial tem CV = 1)  →  μ = 7,16 /min
+
+========================================================================
+SESSÃO 2026-11-17-almoco  (105 min observados, 1 catraca(s) aberta(s))
+========================================================================
+Chegadas: 556  |  λ médio da sessão = 5,30 /min  |  limiar de pico = 5,80 /min (média móvel de 5 min)
+  calma: 65 min, λ = 3,58 /min   |   pico: 40 min, λ = 8,07 /min
+  teste rápido de Poisson na calma: variância/média das chegadas por minuto = 1,88 (perto de 1 é Poisson)
+
+Desistências: 43 alunos saíram da fila sem passar (8% das chegadas). Taxa θ = 0,017 /min por aluno que espera. λ efetivo (quem passou) = 4,89 /min, ρ efetivo = 0,68
+
+Modelo M/M/1 (μ = 7,16 /min, atendimento médio 8,4 s)
+  trecho        λ      ρ   vazia       L   W (min)  Wq (min)
+  calma      3,58   0,50     50%    1,00      0,28      0,14
+  pico       8,07   1,13   ρ ≥ 1: fórmulas não valem, a fila cresce. Use a simulação.
+  sessão     5,30   0,74     26%    2,84      0,54      0,40
+
+VERIFICAÇÃO (slide 19): simulador com λ de calma por 200 h simuladas contra as fórmulas
+  métrica                  fórmula  simulado
+  utilização ρ                 50%       50%
+  alunos no sistema L         1,00      1,00
+  tempo W (min)               0,28      0,28
+  Se os dois lados ficam próximos, o código faz o que o modelo diz.
+(passo reduzido de 5,0 s para 2,5 s: com μ = 7,16 /min o passo maior daria chances somando mais de 1)
+
+SIMULAÇÃO: 30 réplicas de 105 min, passo 2,5 s, K = 50, fila inicial = 0, θ = 0,017 /min, mesma semente em todos os cenários
+  cenário                    L médio  pior momento     W (min)   fila ≥ 10
+  1 catraca                 5,2 ±0,7          25,7    1,0 ±0,1         21%
+  1 cat. sem desist.        6,0 ±0,9          28,5    1,1 ±0,2         25%
+  2ª só no pico             1,2 ±0,1           9,7    0,2 ±0,0          0%
+  2 a hora toda             0,9 ±0,0           9,1    0,2 ±0,0          0%
+  (± é o IC de 95% entre réplicas. Uma hora simulada é uma amostra, não uma medida.)
+
+VALIDAÇÃO (slide 22): fila reconstruída (105 amostras) x simulada nos mesmos instantes
+                         observada  simulada (média)    faixa 5%-95%  dentro?
+  L (alunos em média)         25,7               5,2         2,2-8,6      NÃO
+  pior momento                  51                24           12-39      NÃO
+  fração com fila ≥ 10         75%               21%          4%-37%      NÃO
+  Se algum ficar fora da faixa, revejam primeiro as medições: contagens, separação calma/pico e os atendimentos cronometrados.
+
+CONCLUSÃO: uma 2ª catraca só no pico muda o tempo médio no sistema de 1,0 para 0,2 min e os alunos em média de 5,2 para 1,2 (pico observado: 8,07 chegadas/min contra μ = 7,16).
+Gráfico salvo em saida_17/fila_2026-11-17-almoco.png

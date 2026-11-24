@@ -2,3 +2,7 @@
 __pycache__/
 *.py[cod]
 saida_catraca/
+
+# Gerados pelo Claude (ficam só localmente)
+artefatos/LEIA-ME.md
+artefatos/Relatório da análise da fila da catraca do RU.pdf

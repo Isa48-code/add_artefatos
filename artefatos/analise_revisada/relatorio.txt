@@ -1,0 +1,502 @@
+ATENDIMENTO NA CATRACA (todas as sessões juntas)
+  μ pelas saídas por minuto nos minutos com fila ≥ 3 no início e no fim (slide 57 da Aula 09):
+    2026-11-16-coleta1        7,50 ± 2,09 /min em 10 min
+    2026-11-16-coleta2        7,20 ± 1,57 /min em 15 min
+    2026-11-16-coleta3        poucos minutos com fila
+    2026-11-17-almoco         5,89 ± 0,65 /min em 83 min
+    todas juntas              6,22 ± 0,57 /min em 108 min (IC de 95%)
+  2026-11-16-coleta1: início (B) e saída (C) anotados em celulares diferentes; pareando por ordem, 81% dos tempos dariam negativos: relógios dessincronizados, os 94 atendimentos foram descartados (use as contagens por minuto).
+  2026-11-16-coleta2: início (B) e saída (C) anotados em celulares diferentes; pareando por ordem, 81% dos tempos dariam negativos: relógios dessincronizados, os 128 atendimentos foram descartados (use as contagens por minuto).
+  2026-11-16-coleta3: início (B) e saída (C) anotados em celulares diferentes; pareando por ordem, 81% dos tempos dariam negativos: relógios dessincronizados, os 37 atendimentos foram descartados (use as contagens por minuto).
+  2026-11-17-almoco: 12 saídas sem início pareável (0–60 s) descartadas do cronômetro.
+  495 atendimentos cronometrados: média 6,9 s, mediana 3,7 s, CV = 1,21 → 8,67 /min se fosse o tempo todo de cada aluno.
+  Usando μ = 6,22 /min (estimativa pelas saídas com fila).
+
+CONFERÊNCIA 2 (Aula 09, slide 57): os atendimentos cronometrados devem dar perto de 60/μ = 9,6 s por aluno
+  só a passagem (cronômetro): 6,9 s, -28% de diferença: NÃO bate.
+  passagem 6,9 s + troca 2,4 s (saída de um aluno → início do próximo, 471 trocas) = 9,3 s, -4% de diferença: bate.
+  O cronômetro não pega a troca entre alunos, que também ocupa a catraca. Por isso μ vem das saídas por minuto,
+  e o μ cronometrado entra na sensibilidade só como limite otimista.
+
+========================================================================
+SESSÃO 2026-11-16-coleta1  (14 min observados, 1 catraca(s) aberta(s))
+========================================================================
+Ajuste do balanço (saídas não registradas): o balanço fecha (sobra 0); nada a ajustar.
+Balanço: a fila reconstruída (fila inicial + chegadas − desistências − saídas) termina com 0 alunos. Se não for perto de 0, faltou anotar algo: veja --comparar-ajustes.
+Chegadas: 96  |  λ médio da sessão = 6,86 /min  |  limiar de pico = 10,29 /min (regra: 1,5 × a média (slide 59); aplicado à média móvel de 5 min)
+  calma: 14 min, λ = 6,86 /min   |   pico: 0 min, λ = - /min
+  dispersão D = variância/média das chegadas por minuto: calma 5,27, sessão inteira 5,27 (perto de 1 é Poisson)
+  modelo principal: M/M/1, chegadas uma a uma. Grupos medidos (intervalo ≤ 1,5 s), só para comparação: E[k] = 1,96, D esperado = 3,00
+
+μ desta sessão (saídas/min com fila ≥ 3): 7,50 ± 2,09 /min em 10 min
+  1ª metade: 5,75 ± 4,75 (4 min)   |   2ª metade: 8,67 ± 2,54 (6 min)
+
+Desistências: 3 alunos saíram da fila sem passar (3% das chegadas). Taxa θ = 0,013 /min por aluno que espera. λ efetivo (quem passou) = 6,64 /min, ρ efetivo = 1,07
+
+Modelo M/M/1 (μ = 6,22 /min, atendimento médio 9,6 s)
+  trecho        λ      ρ   vazia       L   W (min)  Wq (min)
+  calma      6,86   1,10   ρ ≥ 1 (ou perto): fórmulas não valem, a fila cresce. Use a simulação.
+  sessão     6,86   1,10   ρ ≥ 1 (ou perto): fórmulas não valem, a fila cresce. Use a simulação.
+
+VERIFICAÇÃO: sem trecho de calma estável nesta sessão. Rode com outra sessão ou ajuste --limiar.
+(passo reduzido de 5,0 s para 2,50 s: com o passo maior as chances somariam mais de 1)
+
+SIMULAÇÃO: 500 réplicas de 14 min, passo 2,50 s, K = 200, fila inicial = 0, θ = 0,013 /min, chegadas uma a uma, mesma semente em todos os cenários
+  cenário                    L médio  pior momento     W (min)   fila ≥ 10           custo  eficiência
+  1 catraca                 8,7 ±0,4          19,3    1,3 ±0,1         38%               -           -
+  1 cat. sem desist.        9,2 ±0,4          20,2    1,3 ±0,1         40%               -           -
+  2 a hora toda             1,5 ±0,0           7,0    0,2 ±0,0          0%  14 catraca-min           7
+  atend. mais rápido        5,9 ±0,3          14,8    0,9 ±0,0         21%               -           -
+  2ª pela fila              3,8 ±0,1          10,5    0,5 ±0,0          2%   2 catraca-min          29
+  (± é o IC de 95% entre réplicas. Uma hora simulada é uma amostra, não uma medida.)
+  Custo = minutos de catraca extra aberta (slide 61: "um parâmetro por vez, com ganho e custo").
+  Eficiência = minutos de espera poupados, somando todos os alunos, por minuto de catraca extra aberta.
+  atend. mais rápido: μ de 6,22 para 7,09 /min: 1,2 s a menos por aluno (metade da troca medida). Sem catraca extra; o custo é mudar o procedimento ou os horários.
+  2ª pela fila: abre quando a fila chega a 8 e fecha quando cai a 4 (o melhor gatilho da busca, na seção PERGUNTA DA EQUIPE).
+
+VALIDAÇÃO (slide 22): fila reconstruída (14 amostras) x simulada nos mesmos instantes
+  Atenção: a fila não foi contada (sem observador C); foi reconstruída das mesmas contagens que dão λ e μ.
+                             observada  simulada (média)    faixa 5%-95%  dentro?
+  L (alunos em média)             16,9               8,2        2,6-16,3      NÃO
+  pior momento                      37                17            7-30      NÃO
+  fração com fila ≥ 10             64%               36%          0%-79%      sim
+  D das chegadas, calma            5,3               0,6         0,3-1,1      NÃO
+  D das chegadas, total            5,3               0,6         0,3-1,1      NÃO
+  curva: minutos na faixa          64%               94%        71%-100%      NÃO
+  Curva (slide 16): a fila observada cai na faixa 5%-95% das réplicas em 64% dos minutos (as próprias réplicas: 94% em média, mínimo aceito 71%). Erro médio da curva média: 13,0 alunos.
+  Trechos de 3+ minutos fora da faixa: 11:57–12:02 (simulada abaixo).
+  D (Aula 09, slide 25) é uma medida que um modelo errado não imita: chegadas uma a uma dão D ≈ 1.
+  Se algum ficar fora da faixa, revejam primeiro as medições: contagens, separação calma/pico e o μ.
+
+VALIDAÇÃO COM AS CHEGADAS REAIS (trace): só atendimento e desistências sorteados, 500 réplicas, passo 2,50 s
+                             observada  simulada (média)    faixa 5%-95%  dentro?
+  L (alunos em média)             16,9              18,3       13,4-23,2      sim
+  pior momento                      37                41           32-49      sim
+  fração com fila ≥ 10             64%               62%         50%-71%      sim
+  Isola o atendimento: se falhar aqui, o problema está em μ (ou nas saídas anotadas), não nas chegadas.
+
+VALIDAÇÃO FORA DA AMOSTRA: μ estimado num trecho, fila comparada em outro
+  μ da 1ª metade (11:51–11:58) = 5,75 /min (4 min), validação na 2ª metade (11:58–12:05):
+                             observada  simulada (média)    faixa 5%-95%  dentro?
+  L (alunos em média)             25,6              14,2        3,7-27,7      sim
+  pior momento                      37                20            7-35      NÃO
+  fração com fila ≥ 10             86%               68%         0%-100%      sim
+  μ das outras sessões = 6,09 ± 0,60 /min (98 min), validação nesta sessão inteira:
+                             observada  simulada (média)    faixa 5%-95%  dentro?
+  L (alunos em média)             16,9               8,7        2,9-17,0      sim
+  pior momento                      37                18            7-31      NÃO
+  fração com fila ≥ 10             64%               39%          0%-79%      sim
+
+REFINAMENTO: M/M/1 (chegadas uma a uma) x chegadas em grupo (E[k] = 1,96, D = 3,00), mesmo μ, θ e semente, 500 réplicas
+  modelo                W 1 catraca   W 2 a hora toda  fila (3 itens)   D calma   D total
+  M/M/1 (principal)         1,3 min           0,2 min             1/3 0,3-1,1 ✗ 0,3-1,1 ✗
+  em grupo                  1,6 min           0,4 min             3/3 1,2-4,4 ✗ 1,2-4,4 ✗
+  D observado: calma 5,27, total 5,27. As colunas de D mostram a faixa 5%-95% do modelo.
+  O M/M/1 é o modelo pedido nos slides; os grupos mostram o que muda quando o modelo também imita as rajadas.
+
+SENSIBILIDADE A μ (100 réplicas por linha, mesma semente): o μ é a medida mais incerta do estudo
+   μ (/min)  origem                     ρ pico  W 1 catraca   W 2 a hora toda
+       5,65  IC baixo                        -      1,7 min           0,3 min
+       6,22  estimado                        -      1,3 min           0,2 min
+       6,80  IC alto                         -      1,0 min           0,2 min
+       8,67  cronometrado (otimista)         -      0,4 min           0,1 min
+
+PERGUNTA DA EQUIPE: abrir a 2ª catraca quando a fila chega a N alunos (e fechar quando cai à metade) poupa mais
+minutos de espera por minuto de catraca aberta do que abri-la no horário de pico?
+  busca do gatilho (200 réplicas por linha; eficiência = minutos de espera poupados por catraca-min):
+  política                           catraca-min   W (min)  eficiência
+  2 a hora toda (referência)                  14       0,2           7
+  abre com 3, fecha com 1                      5       0,3          21
+  abre com 5, fecha com 2                      3       0,4          26
+  abre com 8, fecha com 4                      2       0,5          30  ← melhor
+  abre com 10, fecha com 5                     2       0,7          30
+  abre com 12, fecha com 6                     2       0,8          30
+  abre com 15, fecha com 7                     1       0,9          27
+  abre com 20, fecha com 10                    1       1,1          22
+  abre com 25, fecha com 12                    0       1,2           -
+  abre com 30, fecha com 15                    0       1,2           -
+RESPOSTA (500 réplicas): SIM. Abrindo com 8 e fechando com 4, a 2ª catraca fica 2 min aberta e poupa 29 minutos de espera por minuto aberta, contra 7 no horário de pico (14 min aberta). W: 0,5 min pela fila, 0,2 no horário, 1,3 com 1 catraca.
+  Nenhum gatilho testado espera tão pouco quanto a referência; o melhor N foi escolhido só pela eficiência.
+ACHADO (chegadas em grupo): 1,96 alunos por grupo. Na calma, a fórmula M^X/M/1 multiplica a espera por (1 + D)/2 = 2,0. No almoço simulado, W com 1 catraca vai de 1,3 (um a um) para 1,6 min (em grupo), 1,2×. Com grupos, a eficiência fica 27 pela fila contra 8 no horário: a resposta se mantém.
+
+CONCLUSÃO: sem pico detectado nesta sessão; compare com a 2ª catraca a hora toda.
+Gráfico salvo em artefatos/analise_revisada\fila_2026-11-16-coleta1.png
+========================================================================
+SESSÃO 2026-11-16-coleta2  (17 min observados, 1 catraca(s) aberta(s))
+========================================================================
+Ajuste do balanço (saídas não registradas): o balanço fecha (sobra 0); nada a ajustar.
+Balanço: a fila reconstruída (fila inicial + chegadas − desistências − saídas) termina com 0 alunos. Se não for perto de 0, faltou anotar algo: veja --comparar-ajustes.
+Chegadas: 97  |  λ médio da sessão = 5,71 /min  |  limiar de pico = 8,56 /min (regra: 1,5 × a média (slide 59); aplicado à média móvel de 5 min)
+  calma: 9 min, λ = 1,78 /min   |   pico: 8 min, λ = 10,12 /min
+  pico das 12:25 às 12:33 (picos com menos de 5 min descartados; buracos de até 3 min de calma no meio do pico, juntados)
+  dispersão D = variância/média das chegadas por minuto: calma 7,35, sessão inteira 8,20 (perto de 1 é Poisson)
+  modelo principal: M/M/1, chegadas uma a uma. Grupos medidos (intervalo ≤ 1,5 s), só para comparação: E[k] = 1,94, D esperado = 4,36
+
+μ desta sessão (saídas/min com fila ≥ 3): 7,20 ± 1,57 /min em 15 min
+  1ª metade: 7,62 ± 1,61 (8 min)   |   2ª metade: 6,71 ± 3,49 (7 min)
+
+Desistências: 4 alunos saíram da fila sem passar (4% das chegadas). Taxa θ = 0,008 /min por aluno que espera. λ efetivo (quem passou) = 5,47 /min, ρ efetivo = 0,88
+
+Modelo M/M/1 (μ = 6,22 /min, atendimento médio 9,6 s)
+  trecho        λ      ρ   vazia       L   W (min)  Wq (min)
+  calma      1,78   0,29     71%    0,40      0,23      0,06
+  pico      10,12   1,63   ρ ≥ 1 (ou perto): fórmulas não valem, a fila cresce. Use a simulação.
+  sessão     5,71   0,92      8%   11,05      1,94      1,78
+  M/G/1 na calma (Pollaczek-Khinchine) com o CV cronometrado = 1,21: Wq = 0,08 min, contra 0,06 do M/M/1 (CV = 1). Com CV = 0 (catraca determinística) seria 0,03. O CV cronometrado mede só a passagem na catraca.
+
+VERIFICAÇÃO (slide 19): simulador com λ de calma por 200 h simuladas contra as fórmulas
+  métrica                    M/M/1 (uma a uma)
+                            fórmula   simulado
+  utilização ρ                  29%        29%
+  catraca vazia 1 − ρ           71%        71%
+  alunos no sistema L          0,40       0,41
+  tempo W (min)                0,23       0,23
+  espera na fila Wq            0,06       0,07
+  Se os dois lados ficam próximos, o código faz o que o modelo diz. M^X/M/1: L = ρ(1 + D)/(2(1 − ρ)), D = E[k²]/E[k].
+(passo reduzido de 5,0 s para 1,25 s: com o passo maior as chances somariam mais de 1)
+
+SIMULAÇÃO: 500 réplicas de 17 min, passo 1,25 s, K = 200, fila inicial = 28, θ = 0,008 /min, chegadas uma a uma, mesma semente em todos os cenários
+  cenário                    L médio  pior momento     W (min)   fila ≥ 10           custo  eficiência
+  1 catraca                38,4 ±0,8          58,4    6,7 ±0,1         96%               -           -
+  1 cat. sem desist.       41,0 ±0,8          60,6    7,2 ±0,1         97%               -           -
+  2ª só no pico            10,5 ±0,5          31,8    1,8 ±0,1         44%   8 catraca-min          59
+  2 a hora toda             9,5 ±0,3          31,8    1,7 ±0,1         40%  17 catraca-min          29
+  atend. mais rápido       31,8 ±0,7          52,4    5,6 ±0,1         88%               -           -
+  aulas escalonadas        23,9 ±0,7          35,2    4,2 ±0,1         91%               -           -
+  2ª pela fila             10,3 ±0,3          31,8    1,8 ±0,1         44%   8 catraca-min          61
+  (± é o IC de 95% entre réplicas. Uma hora simulada é uma amostra, não uma medida.)
+  Custo = minutos de catraca extra aberta (slide 61: "um parâmetro por vez, com ganho e custo").
+  Eficiência = minutos de espera poupados, somando todos os alunos, por minuto de catraca extra aberta.
+  atend. mais rápido: μ de 6,22 para 7,09 /min: 1,2 s a menos por aluno (metade da troca medida). Sem catraca extra; o custo é mudar o procedimento ou os horários.
+  aulas escalonadas: o excesso de chegadas de cada pico espalhado no dobro do tempo (mesmo total de alunos). Sem catraca extra; o custo é mudar o procedimento ou os horários.
+  2ª pela fila: abre quando a fila chega a 12 e fecha quando cai a 6 (o melhor gatilho da busca, na seção PERGUNTA DA EQUIPE).
+
+VALIDAÇÃO (slide 22): fila reconstruída (17 amostras) x simulada nos mesmos instantes
+  Atenção: a fila não foi contada (sem observador C); foi reconstruída das mesmas contagens que dão λ e μ.
+                             observada  simulada (média)    faixa 5%-95%  dentro?
+  L (alunos em média)             31,7              38,8       24,6-53,1      sim
+  pior momento                      52                57           39-75      sim
+  fração com fila ≥ 10             94%               97%        82%-100%      sim
+  D das chegadas, calma            7,3               0,8         0,3-1,6      NÃO
+  D das chegadas, total            8,2               3,8         2,8-5,0      NÃO
+  curva: minutos na faixa          82%               92%        53%-100%      sim
+  Curva (slide 16): a fila observada cai na faixa 5%-95% das réplicas em 82% dos minutos (as próprias réplicas: 92% em média, mínimo aceito 53%). Erro médio da curva média: 9,9 alunos.
+  D (Aula 09, slide 25) é uma medida que um modelo errado não imita: chegadas uma a uma dão D ≈ 1.
+  Se algum ficar fora da faixa, revejam primeiro as medições: contagens, separação calma/pico e o μ.
+
+VALIDAÇÃO COM AS CHEGADAS REAIS (trace): só atendimento e desistências sorteados, 500 réplicas, passo 1,25 s
+                             observada  simulada (média)    faixa 5%-95%  dentro?
+  L (alunos em média)             31,7              42,2       34,1-50,6      NÃO
+  pior momento                      52                61           51-72      sim
+  fração com fila ≥ 10             94%               99%        94%-100%      sim
+  Isola o atendimento: se falhar aqui, o problema está em μ (ou nas saídas anotadas), não nas chegadas.
+
+VALIDAÇÃO FORA DA AMOSTRA: μ estimado num trecho, fila comparada em outro
+  μ da 1ª metade (12:25–12:33) = 7,62 /min (8 min), validação na 2ª metade (12:33–12:42):
+                             observada  simulada (média)    faixa 5%-95%  dentro?
+  L (alunos em média)             29,6              22,5        8,8-40,0      sim
+  pior momento                      48                45           27-63      sim
+  fração com fila ≥ 10             89%               70%        33%-100%      sim
+  μ das outras sessões = 6,06 ± 0,62 /min (93 min), validação nesta sessão inteira:
+                             observada  simulada (média)    faixa 5%-95%  dentro?
+  L (alunos em média)             31,7              40,2       27,4-52,8      sim
+  pior momento                      52                58           42-75      sim
+  fração com fila ≥ 10             94%               98%        88%-100%      sim
+
+REFINAMENTO: como dar λ ao simulador (200 réplicas, μ = 6,22; a 2ª catraca abre nos minutos de pico de cada linha)
+  λ usado                                              2ª catraca   curva  fila (3)  W 1 cat.  W 2ª pico
+  2 níveis, 1,5 × a média (slide 59) (principal)            8 min     82%       3/3   6,7 min    1,9 min
+  2 níveis, duas médias (versão anterior)                   9 min     88%       3/3   6,7 min    1,6 min
+  média móvel de 5 min (refinamento)                        8 min     94%       3/3   6,6 min    1,7 min
+  "curva" = minutos com a fila observada dentro da faixa 5%-95%. Os slides pedem 2 níveis (calma e pico);
+  a média móvel copia a curva das chegadas minuto a minuto, por isso encaixa melhor quase por construção.
+
+REFINAMENTO: M/M/1 (chegadas uma a uma) x chegadas em grupo (E[k] = 1,94, D = 4,36), mesmo μ, θ e semente, 500 réplicas
+  modelo                W 1 catraca   W 2ª só no pico  fila (3 itens)   D calma   D total
+  M/M/1 (principal)         6,7 min           1,8 min             3/3 0,3-1,6 ✗ 2,8-5,0 ✗
+  em grupo                  6,7 min           2,2 min             3/3 0,7-9,0 ✓3,3-11,2 ✓
+  D observado: calma 7,35, total 8,20. As colunas de D mostram a faixa 5%-95% do modelo.
+  O M/M/1 é o modelo pedido nos slides; os grupos mostram o que muda quando o modelo também imita as rajadas.
+
+SENSIBILIDADE A μ (100 réplicas por linha, mesma semente): o μ é a medida mais incerta do estudo
+   μ (/min)  origem                     ρ pico  W 1 catraca   W 2ª só no pico
+       5,65  IC baixo                     1,79      7,6 min           2,5 min
+       6,22  estimado                     1,63      6,9 min           1,9 min
+       6,80  IC alto                      1,49      6,1 min           1,5 min
+       8,67  cronometrado (otimista)      1,17      4,0 min           0,7 min
+
+PERGUNTA DA EQUIPE: abrir a 2ª catraca quando a fila chega a N alunos (e fechar quando cai à metade) poupa mais
+minutos de espera por minuto de catraca aberta do que abri-la no horário de pico?
+  busca do gatilho (200 réplicas por linha; eficiência = minutos de espera poupados por catraca-min):
+  política                           catraca-min   W (min)  eficiência
+  2ª só no pico (referência)                   8       1,9          59
+  abre com 3, fecha com 1                      9       1,7          56
+  abre com 5, fecha com 2                      8       1,7          58
+  abre com 8, fecha com 4                      8       1,8          59
+  abre com 10, fecha com 5                     8       1,8          60
+  abre com 12, fecha com 6                     8       1,8          61  ← melhor
+  abre com 15, fecha com 7                     8       1,9          61
+  abre com 20, fecha com 10                    7       2,1          64
+  abre com 25, fecha com 12                    7       2,3          66
+  abre com 30, fecha com 15                    6       2,7          66
+RESPOSTA (500 réplicas): SIM. Abrindo com 12 e fechando com 6, a 2ª catraca fica 8 min aberta e poupa 61 minutos de espera por minuto aberta, contra 59 no horário de pico (8 min aberta). W: 1,8 min pela fila, 1,8 no horário, 6,7 com 1 catraca.
+ACHADO (chegadas em grupo): 1,94 alunos por grupo. Na calma, a fórmula M^X/M/1 multiplica a espera por (1 + D)/2 = 2,7. No almoço simulado, W com 1 catraca vai de 6,7 (um a um) para 6,7 min (em grupo), 1,0×. Com grupos, a eficiência fica 59 pela fila contra 55 no horário: a resposta se mantém.
+
+CONCLUSÃO: Das 12:25 às 12:33 chegam 10,12 alunos/min para μ = 6,22 /min de uma catraca (ρ = 1,63: a fila cresce). Uma 2ª catraca só nesse intervalo muda o tempo médio no sistema de 6,7 ± 0,1 para 1,8 ± 0,1 min e os alunos em média de 38,4 para 10,5. Com μ entre 5,65 e 8,67, W vai de 4,0–7,6 min para 0,7–2,5 min: a direção se mantém, o tamanho do ganho depende de μ. Custo: 8 minutos de 2ª catraca aberta. Pela fila (abre quando a fila chega a 12 e fecha quando cai a 6): W = 1,8 min com 8 min de 2ª catraca. Sem catraca extra: atend. mais rápido → W = 5,6 min; aulas escalonadas → W = 4,2 min.
+Gráfico salvo em artefatos/analise_revisada\fila_2026-11-16-coleta2.png
+========================================================================
+SESSÃO 2026-11-16-coleta3  (10 min observados, 1 catraca(s) aberta(s))
+========================================================================
+Ajuste do balanço (saídas não registradas): o balanço fecha (sobra 0); nada a ajustar.
+Balanço: a fila reconstruída (fila inicial + chegadas − desistências − saídas) termina com 0 alunos. Se não for perto de 0, faltou anotar algo: veja --comparar-ajustes.
+Chegadas: 37  |  λ médio da sessão = 3,70 /min  |  limiar de pico = 5,55 /min (regra: 1,5 × a média (slide 59); aplicado à média móvel de 5 min)
+  calma: 10 min, λ = 3,70 /min   |   pico: 0 min, λ = - /min
+  dispersão D = variância/média das chegadas por minuto: calma 0,87, sessão inteira 0,87 (perto de 1 é Poisson)
+  modelo principal: M/M/1, chegadas uma a uma. Grupos medidos (intervalo ≤ 1,5 s), só para comparação: E[k] = 1,23, D esperado = 1,42
+
+μ desta sessão: poucos minutos com fila para estimar.
+
+Desistências: 2 alunos saíram da fila sem passar (5% das chegadas). Taxa θ = 0,500 /min por aluno que espera. λ efetivo (quem passou) = 3,50 /min, ρ efetivo = 0,56
+
+Modelo M/M/1 (μ = 6,22 /min, atendimento médio 9,6 s)
+  trecho        λ      ρ   vazia       L   W (min)  Wq (min)
+  calma      3,70   0,59     41%    1,47      0,40      0,24
+  sessão     3,70   0,59     41%    1,47      0,40      0,24
+  M/G/1 na calma (Pollaczek-Khinchine) com o CV cronometrado = 1,21: Wq = 0,29 min, contra 0,24 do M/M/1 (CV = 1). Com CV = 0 (catraca determinística) seria 0,12. O CV cronometrado mede só a passagem na catraca.
+
+VERIFICAÇÃO (slide 19): simulador com λ de calma por 200 h simuladas contra as fórmulas
+  métrica                    M/M/1 (uma a uma)
+                            fórmula   simulado
+  utilização ρ                  59%        59%
+  catraca vazia 1 − ρ           41%        41%
+  alunos no sistema L          1,47       1,44
+  tempo W (min)                0,40       0,39
+  espera na fila Wq            0,24       0,23
+  Se os dois lados ficam próximos, o código faz o que o modelo diz. M^X/M/1: L = ρ(1 + D)/(2(1 − ρ)), D = E[k²]/E[k].
+(passo reduzido de 5,0 s para 0,31 s: com o passo maior as chances somariam mais de 1)
+
+SIMULAÇÃO: 500 réplicas de 10 min, passo 0,31 s, K = 200, fila inicial = 0, θ = 0,500 /min, chegadas uma a uma, mesma semente em todos os cenários
+  cenário                    L médio  pior momento     W (min)   fila ≥ 10           custo  eficiência
+  1 catraca                 1,0 ±0,0           4,8    0,3 ±0,0          0%               -           -
+  1 cat. sem desist.        1,3 ±0,1           5,5    0,4 ±0,0          0%               -           -
+  2 a hora toda             0,6 ±0,0           3,8    0,2 ±0,0          0%  10 catraca-min           0
+  atend. mais rápido        0,9 ±0,0           4,5    0,2 ±0,0          0%               -           -
+  2ª pela fila              0,7 ±0,0           4,1    0,2 ±0,0          0%   1 catraca-min           3
+  (± é o IC de 95% entre réplicas. Uma hora simulada é uma amostra, não uma medida.)
+  Custo = minutos de catraca extra aberta (slide 61: "um parâmetro por vez, com ganho e custo").
+  Eficiência = minutos de espera poupados, somando todos os alunos, por minuto de catraca extra aberta.
+  atend. mais rápido: μ de 6,22 para 7,09 /min: 1,2 s a menos por aluno (metade da troca medida). Sem catraca extra; o custo é mudar o procedimento ou os horários.
+  2ª pela fila: abre quando a fila chega a 3 e fecha quando cai a 1 (o melhor gatilho da busca, na seção PERGUNTA DA EQUIPE).
+
+VALIDAÇÃO (slide 22): fila reconstruída (10 amostras) x simulada nos mesmos instantes
+  Atenção: a fila não foi contada (sem observador C); foi reconstruída das mesmas contagens que dão λ e μ.
+                             observada  simulada (média)    faixa 5%-95%  dentro?
+  L (alunos em média)              1,0               1,0         0,3-1,9      sim
+  pior momento                       3                 3             1-6      sim
+  fração com fila ≥ 10              0%                0%           0%-0%      sim
+  D das chegadas, calma            0,9               0,9         0,3-1,6      sim
+  D das chegadas, total            0,9               0,9         0,3-1,6      sim
+  curva: minutos na faixa         100%               97%        90%-100%      sim
+  Curva (slide 16): a fila observada cai na faixa 5%-95% das réplicas em 100% dos minutos (as próprias réplicas: 97% em média, mínimo aceito 90%). Erro médio da curva média: 0,9 alunos.
+  D (Aula 09, slide 25) é uma medida que um modelo errado não imita: chegadas uma a uma dão D ≈ 1.
+  Se algum ficar fora da faixa, revejam primeiro as medições: contagens, separação calma/pico e o μ.
+
+VALIDAÇÃO COM AS CHEGADAS REAIS (trace): só atendimento e desistências sorteados, 500 réplicas, passo 0,31 s
+                             observada  simulada (média)    faixa 5%-95%  dentro?
+  L (alunos em média)              1,0               0,9         0,4-1,4      sim
+  pior momento                       3                 3             2-5      sim
+  fração com fila ≥ 10              0%                0%           0%-0%      sim
+  Isola o atendimento: se falhar aqui, o problema está em μ (ou nas saídas anotadas), não nas chegadas.
+
+VALIDAÇÃO FORA DA AMOSTRA: μ estimado num trecho, fila comparada em outro
+  1ª metade sem minutos com fila suficientes para estimar μ.
+  μ das outras sessões = 6,22 ± 0,57 /min (108 min), validação nesta sessão inteira:
+                             observada  simulada (média)    faixa 5%-95%  dentro?
+  L (alunos em média)              1,0               1,0         0,3-1,9      sim
+  pior momento                       3                 3             1-6      sim
+  fração com fila ≥ 10              0%                0%           0%-0%      sim
+
+REFINAMENTO: M/M/1 (chegadas uma a uma) x chegadas em grupo (E[k] = 1,23, D = 1,42), mesmo μ, θ e semente, 500 réplicas
+  modelo                W 1 catraca   W 2 a hora toda  fila (3 itens)   D calma   D total
+  M/M/1 (principal)         0,3 min           0,2 min             3/3 0,3-1,6 ✓ 0,3-1,6 ✓
+  em grupo                  0,3 min           0,2 min             3/3 0,5-2,4 ✓ 0,5-2,4 ✓
+  D observado: calma 0,87, total 0,87. As colunas de D mostram a faixa 5%-95% do modelo.
+  O M/M/1 é o modelo pedido nos slides; os grupos mostram o que muda quando o modelo também imita as rajadas.
+
+SENSIBILIDADE A μ (100 réplicas por linha, mesma semente): o μ é a medida mais incerta do estudo
+   μ (/min)  origem                     ρ pico  W 1 catraca   W 2 a hora toda
+       5,65  IC baixo                        -      0,3 min           0,2 min
+       6,22  estimado                        -      0,3 min           0,2 min
+       6,80  IC alto                         -      0,3 min           0,2 min
+       8,67  cronometrado (otimista)         -      0,2 min           0,1 min
+
+PERGUNTA DA EQUIPE: abrir a 2ª catraca quando a fila chega a N alunos (e fechar quando cai à metade) poupa mais
+minutos de espera por minuto de catraca aberta do que abri-la no horário de pico?
+  busca do gatilho (200 réplicas por linha; eficiência = minutos de espera poupados por catraca-min):
+  política                           catraca-min   W (min)  eficiência
+  2 a hora toda (referência)                  10       0,2           0
+  abre com 3, fecha com 1                      1       0,2           4  ← melhor
+  abre com 5, fecha com 2                      0       0,3           -
+  abre com 8, fecha com 4                      0       0,3           -
+  abre com 10, fecha com 5                     0       0,3           -
+  abre com 12, fecha com 6                     0       0,3           -
+  abre com 15, fecha com 7                     0       0,3           -
+  abre com 20, fecha com 10                    0       0,3           -
+  abre com 25, fecha com 12                    0       0,3           -
+  abre com 30, fecha com 15                    0       0,3           -
+RESPOSTA (500 réplicas): SIM. Abrindo com 3 e fechando com 1, a 2ª catraca fica 1 min aberta e poupa 3 minutos de espera por minuto aberta, contra 0 no horário de pico (10 min aberta). W: 0,2 min pela fila, 0,2 no horário, 0,3 com 1 catraca.
+  Nenhum gatilho testado espera tão pouco quanto a referência; o melhor N foi escolhido só pela eficiência.
+ACHADO (chegadas em grupo): 1,23 alunos por grupo. Na calma, a fórmula M^X/M/1 multiplica a espera por (1 + D)/2 = 1,2. No almoço simulado, W com 1 catraca vai de 0,3 (um a um) para 0,3 min (em grupo), 1,1×. Com grupos, a eficiência fica 4 pela fila contra 1 no horário: a resposta se mantém.
+
+CONCLUSÃO: sem pico detectado nesta sessão; compare com a 2ª catraca a hora toda.
+Gráfico salvo em artefatos/analise_revisada\fila_2026-11-16-coleta3.png
+========================================================================
+SESSÃO 2026-11-17-almoco  (105 min observados, 1 catraca(s) aberta(s))
+========================================================================
+Ajuste do balanço (saídas não registradas): 48 saídas não registradas distribuídas em 46 minutos a partir de 12:16 (depois da última vez em que a fila reconstruída ficou abaixo de 3, quando a conta ainda fechava).
+Balanço: a fila reconstruída (fila inicial + chegadas − desistências − saídas) termina com 2 alunos. Se não for perto de 0, faltou anotar algo: veja --comparar-ajustes.
+Chegadas: 556  |  λ médio da sessão = 5,30 /min  |  limiar de pico = 7,94 /min (regra: 1,5 × a média (slide 59); aplicado à média móvel de 5 min)
+  calma: 92 min, λ = 4,64 /min   |   pico: 13 min, λ = 9,92 /min
+  pico das 11:55 às 12:03 e das 12:25 às 12:30 (picos com menos de 5 min descartados; buracos de até 3 min de calma no meio do pico, juntados)
+  dispersão D = variância/média das chegadas por minuto: calma 2,59, sessão inteira 3,14 (perto de 1 é Poisson)
+  modelo principal: M/M/1, chegadas uma a uma. Grupos medidos (intervalo ≤ 1,5 s), só para comparação: E[k] = 1,84, D esperado = 2,60
+
+μ desta sessão (saídas/min com fila ≥ 3): 5,89 ± 0,65 /min em 83 min
+  1ª metade: 6,02 ± 0,94 (48 min)   |   2ª metade: 5,71 ± 0,88 (35 min)
+
+Desistências: 43 alunos saíram da fila sem passar (8% das chegadas). Taxa θ = 0,034 /min por aluno que espera. λ efetivo (quem passou) = 4,89 /min, ρ efetivo = 0,79
+
+Modelo M/M/1 (μ = 6,22 /min, atendimento médio 9,6 s)
+  trecho        λ      ρ   vazia       L   W (min)  Wq (min)
+  calma      4,64   0,75     25%    2,94      0,63      0,47
+  pico       9,92   1,59   ρ ≥ 1 (ou perto): fórmulas não valem, a fila cresce. Use a simulação.
+  sessão     5,30   0,85     15%    5,71      1,08      0,92
+  M/G/1 na calma (Pollaczek-Khinchine) com o CV cronometrado = 1,21: Wq = 0,58 min, contra 0,47 do M/M/1 (CV = 1). Com CV = 0 (catraca determinística) seria 0,24. O CV cronometrado mede só a passagem na catraca.
+
+VERIFICAÇÃO (slide 19): simulador com λ de calma por 200 h simuladas contra as fórmulas
+  métrica                    M/M/1 (uma a uma)
+                            fórmula   simulado
+  utilização ρ                  75%        75%
+  catraca vazia 1 − ρ           25%        25%
+  alunos no sistema L          2,94       2,95
+  tempo W (min)                0,63       0,64
+  espera na fila Wq            0,47       0,47
+  Se os dois lados ficam próximos, o código faz o que o modelo diz. M^X/M/1: L = ρ(1 + D)/(2(1 − ρ)), D = E[k²]/E[k].
+(passo reduzido de 5,0 s para 1,25 s: com o passo maior as chances somariam mais de 1)
+
+SIMULAÇÃO: 500 réplicas de 105 min, passo 1,25 s, K = 200, fila inicial = 42, θ = 0,034 /min, chegadas uma a uma, mesma semente em todos os cenários
+  cenário                    L médio  pior momento     W (min)   fila ≥ 10           custo  eficiência
+  1 catraca                10,2 ±0,2          44,4    1,9 ±0,0         38%               -           -
+  1 cat. sem desist.       18,1 ±0,8          50,7    3,4 ±0,1         59%               -           -
+  2ª só no pico             6,1 ±0,1          43,3    1,1 ±0,0         18%  13 catraca-min          34
+  2 a hora toda             2,2 ±0,0          42,3    0,4 ±0,0          4% 105 catraca-min           8
+  atend. mais rápido        6,9 ±0,1          43,3    1,3 ±0,0         25%               -           -
+  aulas escalonadas         9,3 ±0,2          43,5    1,8 ±0,0         35%               -           -
+  2ª pela fila              6,1 ±0,1          42,3    1,1 ±0,0         23%   7 catraca-min          64
+  (± é o IC de 95% entre réplicas. Uma hora simulada é uma amostra, não uma medida.)
+  Custo = minutos de catraca extra aberta (slide 61: "um parâmetro por vez, com ganho e custo").
+  Eficiência = minutos de espera poupados, somando todos os alunos, por minuto de catraca extra aberta.
+  atend. mais rápido: μ de 6,22 para 7,09 /min: 1,2 s a menos por aluno (metade da troca medida). Sem catraca extra; o custo é mudar o procedimento ou os horários.
+  aulas escalonadas: o excesso de chegadas de cada pico espalhado no dobro do tempo (mesmo total de alunos). Sem catraca extra; o custo é mudar o procedimento ou os horários.
+  2ª pela fila: abre quando a fila chega a 25 e fecha quando cai a 12 (o melhor gatilho da busca, na seção PERGUNTA DA EQUIPE).
+
+VALIDAÇÃO (slide 22): fila reconstruída (105 amostras) x simulada nos mesmos instantes
+  Atenção: a fila não foi contada (sem observador C); foi reconstruída das mesmas contagens que dão λ e μ.
+                             observada  simulada (média)    faixa 5%-95%  dentro?
+  L (alunos em média)             12,9              10,4        6,6-15,6      sim
+  pior momento                      42                43           41-50      sim
+  fração com fila ≥ 10             59%               39%         22%-58%      NÃO
+  D das chegadas, calma            2,6               0,9         0,7-1,1      NÃO
+  D das chegadas, total            3,1               1,4         1,1-1,8      NÃO
+  curva: minutos na faixa          89%               94%        80%-100%      sim
+  Curva (slide 16): a fila observada cai na faixa 5%-95% das réplicas em 89% dos minutos (as próprias réplicas: 94% em média, mínimo aceito 80%). Erro médio da curva média: 7,6 alunos.
+  Trechos de 3+ minutos fora da faixa: 11:51–11:54 (simulada abaixo); 12:21–12:24 (simulada abaixo).
+  D (Aula 09, slide 25) é uma medida que um modelo errado não imita: chegadas uma a uma dão D ≈ 1.
+  Se algum ficar fora da faixa, revejam primeiro as medições: contagens, separação calma/pico e o μ.
+
+VALIDAÇÃO COM AS CHEGADAS REAIS (trace): só atendimento e desistências sorteados, 500 réplicas, passo 1,25 s
+                             observada  simulada (média)    faixa 5%-95%  dentro?
+  L (alunos em média)             12,9              14,7       10,7-20,2      sim
+  pior momento                      42                45           41-54      sim
+  fração com fila ≥ 10             59%               60%         46%-72%      sim
+  Isola o atendimento: se falhar aqui, o problema está em μ (ou nas saídas anotadas), não nas chegadas.
+
+VALIDAÇÃO FORA DA AMOSTRA: μ estimado num trecho, fila comparada em outro
+  μ da 1ª metade (11:30–12:22) = 6,02 /min (48 min), validação na 2ª metade (12:22–13:15):
+                             observada  simulada (média)    faixa 5%-95%  dentro?
+  L (alunos em média)             10,6               6,5        3,1-12,4      sim
+  pior momento                      37                24           11-39      sim
+  fração com fila ≥ 10             47%               24%          4%-49%      sim
+  μ das outras sessões = 7,32 ± 1,16 /min (25 min), validação nesta sessão inteira:
+                             observada  simulada (média)    faixa 5%-95%  dentro?
+  L (alunos em média)             12,9               6,5         4,4-9,3      NÃO
+  pior momento                      42                42           41-45      sim
+  fração com fila ≥ 10             59%               23%         12%-33%      NÃO
+
+REFINAMENTO: como dar λ ao simulador (200 réplicas, μ = 6,22; a 2ª catraca abre nos minutos de pico de cada linha)
+  λ usado                                              2ª catraca   curva  fila (3)  W 1 cat.  W 2ª pico
+  2 níveis, 1,5 × a média (slide 59) (principal)           13 min     87%       2/3   1,9 min    1,1 min
+  2 níveis, duas médias (versão anterior)                  44 min     85%       3/3   2,8 min    0,7 min
+  média móvel de 5 min (refinamento)                       13 min     92%       3/3   2,7 min    1,4 min
+  "curva" = minutos com a fila observada dentro da faixa 5%-95%. Os slides pedem 2 níveis (calma e pico);
+  a média móvel copia a curva das chegadas minuto a minuto, por isso encaixa melhor quase por construção.
+
+REFINAMENTO: M/M/1 (chegadas uma a uma) x chegadas em grupo (E[k] = 1,84, D = 2,60), mesmo μ, θ e semente, 500 réplicas
+  modelo                W 1 catraca   W 2ª só no pico  fila (3 itens)   D calma   D total
+  M/M/1 (principal)         1,9 min           1,1 min             2/3 0,7-1,1 ✗ 1,1-1,8 ✗
+  em grupo                  2,2 min           1,4 min             3/3 1,9-3,1 ✓ 2,3-3,8 ✓
+  D observado: calma 2,59, total 3,14. As colunas de D mostram a faixa 5%-95% do modelo.
+  O M/M/1 é o modelo pedido nos slides; os grupos mostram o que muda quando o modelo também imita as rajadas.
+
+SENSIBILIDADE A μ (100 réplicas por linha, mesma semente): o μ é a medida mais incerta do estudo
+   μ (/min)  origem                     ρ pico  W 1 catraca   W 2ª só no pico
+       5,65  IC baixo                     1,76      2,6 min           1,5 min
+       6,22  estimado                     1,59      1,8 min           1,1 min
+       6,80  IC alto                      1,46      1,4 min           0,9 min
+       8,67  cronometrado (otimista)      1,14      0,8 min           0,5 min
+
+PERGUNTA DA EQUIPE: abrir a 2ª catraca quando a fila chega a N alunos (e fechar quando cai à metade) poupa mais
+minutos de espera por minuto de catraca aberta do que abri-la no horário de pico?
+  busca do gatilho (200 réplicas por linha; eficiência = minutos de espera poupados por catraca-min):
+  política                           catraca-min   W (min)  eficiência
+  2ª só no pico (referência)                  13       1,1          33
+  abre com 3, fecha com 1                     27       0,4          31
+  abre com 5, fecha com 2                     19       0,5          40
+  abre com 8, fecha com 4                     14       0,7          50
+  abre com 10, fecha com 5                    12       0,7          53
+  abre com 12, fecha com 6                    11       0,8          55
+  abre com 15, fecha com 7                    10       0,9          57
+  abre com 20, fecha com 10                    8       1,0          61
+  abre com 25, fecha com 12                    7       1,1          63  ← melhor
+  abre com 30, fecha com 15                    5       1,3          66
+RESPOSTA (500 réplicas): SIM. Abrindo com 25 e fechando com 12, a 2ª catraca fica 7 min aberta e poupa 64 minutos de espera por minuto aberta, contra 34 no horário de pico (13 min aberta). W: 1,1 min pela fila, 1,1 no horário, 1,9 com 1 catraca.
+ACHADO (chegadas em grupo): 1,84 alunos por grupo. Na calma, a fórmula M^X/M/1 multiplica a espera por (1 + D)/2 = 1,8. No almoço simulado, W com 1 catraca vai de 1,9 (um a um) para 2,2 min (em grupo), 1,2×. Com grupos, a eficiência fica 64 pela fila contra 35 no horário: a resposta se mantém.
+
+CONCLUSÃO: Das 11:55 às 12:03 e das 12:25 às 12:30 chegam 9,92 alunos/min para μ = 6,22 /min de uma catraca (ρ = 1,59: a fila cresce). Uma 2ª catraca só nesse intervalo muda o tempo médio no sistema de 1,9 ± 0,0 para 1,1 ± 0,0 min e os alunos em média de 10,2 para 6,1. Com μ entre 5,65 e 8,67, W vai de 0,8–2,6 min para 0,5–1,5 min: a direção se mantém, o tamanho do ganho depende de μ. Custo: 13 minutos de 2ª catraca aberta. Pela fila (abre quando a fila chega a 25 e fecha quando cai a 12): W = 1,1 min com 7 min de 2ª catraca. Sem catraca extra: atend. mais rápido → W = 1,3 min; aulas escalonadas → W = 1,8 min.
+Gráfico salvo em artefatos/analise_revisada\fila_2026-11-17-almoco.png
+
+========================================================================
+ENTRE SESSÕES
+========================================================================
+  sessão                        λ calma   λ pico  λ médio
+  2026-11-16-coleta1               6,86        -     6,86
+  2026-11-16-coleta2               1,78    10,12     5,71
+  2026-11-16-coleta3               3,70        -     3,70
+  2026-11-17-almoco                4,64     9,92     5,30
+  λ de calma: média 4,24 ± 3,36 /min (IC 95% entre 4 sessões)
+  λ de pico: média 10,02 ± 1,28 /min (IC 95% entre 2 sessões)
+  Juntando os 21 minutos de pico de 2 sessões (slide 59: "uma hora tem poucos picos; juntem dias diferentes"): λ de pico = 10,00 ± 2,70 /min, ρ = 1,61 com μ = 6,22.
+  Ressalva: cada sessão tem poucos minutos de pico; o λ de pico de uma sessão sozinha é incerto.
+
+========================================================================
+HIPÓTESES PARA O BALANÇO DE 2026-11-17-almoco: sobram 48 alunos no fim (200 réplicas por linha)
+========================================================================
+  Cada hipótese muda a fila reconstruída, e com ela o μ estimado, o θ e a validação.
+  hipótese                   fila final        μ (/min)      θ  validação  W 1 cat.  W 2ª pico
+  sem ajuste                         48     4,80 ± 0,63  0,015     3 de 3       8,0        4,0
+  desistências não vistas             0     4,88 ± 0,64  0,053     3 de 3       3,4        2,1
+  saídas não registradas              2     5,89 ± 0,65  0,034     3 de 3       2,3        1,3
+  fila inicial menor                 48     4,56 ± 0,65  0,017     3 de 3       6,3        2,7
+  (cada linha simula com o μ que ela mesma estima)
+
+GARGALO: só a catraca foi medida. Sem λ e μ das filas de dentro (--fila), não dá para afirmar que ela é o gargalo.

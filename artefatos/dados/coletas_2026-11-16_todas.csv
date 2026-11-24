@@ -1,0 +1,777 @@
+coleta,observador,tipo,hora,t_seg,valor,arquivo
+1,A,inicio,11:51:58.191,0.0,0.0,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:52:00.482,2.3,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:52:01.800,3.6,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:52:05.536,7.3,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:52:06.948,8.8,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:52:25.838,27.6,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:52:50.059,51.9,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:53:03.017,64.8,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:54:11.738,133.5,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:54:17.028,138.8,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:54:25.777,147.6,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:54:30.029,151.8,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:54:47.839,169.6,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:54:48.669,170.5,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:54:56.509,178.3,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:54:57.873,179.7,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:54:59.158,181.0,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:55:00.483,182.3,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:55:24.088,205.9,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:55:27.776,209.6,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:55:28.522,210.3,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:55:29.235,211.0,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:55:30.018,211.8,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:55:31.151,213.0,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:55:44.687,226.5,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:55:47.245,229.1,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:55:48.543,230.4,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:55:49.903,231.7,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:56:11.885,253.7,,Coleta 1 A_261116_124939.pdf
+1,A,desistencia,11:56:25.170,267.0,,Coleta 1 A_261116_124939.pdf
+1,A,desistencia,11:56:26.881,268.7,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:56:34.115,275.9,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:56:38.029,279.8,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:56:39.277,281.1,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:56:40.155,282.0,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:56:48.163,290.0,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:57:09.660,311.5,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:57:10.425,312.2,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:57:11.341,313.1,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:57:12.173,314.0,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:57:12.924,314.7,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:57:13.698,315.5,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:57:14.433,316.2,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:57:21.022,322.8,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:57:22.204,324.0,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:57:30.233,332.0,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:57:31.888,333.7,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:57:32.953,334.8,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:57:42.509,344.3,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:57:49.148,351.0,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:57:50.777,352.6,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:57:55.915,357.7,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:57:59.419,361.2,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:58:00.247,362.1,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:58:00.982,362.8,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:58:01.743,363.6,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:58:04.049,365.9,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:58:06.876,368.7,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:58:08.204,370.0,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:58:09.288,371.1,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:58:10.262,372.1,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:58:15.876,377.7,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:58:17.123,378.9,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:58:29.619,391.4,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:58:30.918,392.7,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:58:31.651,393.5,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:58:32.380,394.2,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:59:05.040,426.8,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:59:28.428,450.2,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:59:29.162,451.0,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:59:30.039,451.8,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:59:34.794,456.6,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:59:39.097,460.9,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:59:55.149,477.0,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,11:59:56.037,477.8,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:00:02.284,484.1,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:00:03.397,485.2,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:00:05.558,487.4,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:00:06.435,488.2,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:00:08.645,490.5,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:00:16.967,498.8,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:00:19.180,501.0,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:00:19.962,501.8,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:00:20.536,502.3,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:00:21.203,503.0,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:00:21.949,503.8,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:00:36.079,517.9,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:00:46.870,528.7,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:00:47.620,529.4,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:00:48.266,530.1,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:00:48.999,530.8,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:00:49.782,531.6,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:00:59.977,541.8,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:01:00.559,542.4,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:01:01.339,543.1,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:01:05.711,547.5,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:01:20.131,561.9,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:01:40.470,582.3,,Coleta 1 A_261116_124939.pdf
+1,A,chegada,12:01:46.765,588.6,,Coleta 1 A_261116_124939.pdf
+1,A,desistencia,12:03:17.655,679.5,,Coleta 1 A_261116_124939.pdf
+1,A,fim,12:05:49.568,831.4,,Coleta 1 A_261116_124939.pdf
+2,A,inicio,12:25:12.659,0.0,28.0,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:25:19.400,6.7,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:25:20.029,7.4,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:25:20.675,8.0,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:25:21.343,8.7,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:25:21.955,9.3,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:25:22.537,9.9,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:25:23.071,10.4,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:25:23.632,11.0,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:25:24.228,11.6,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:25:25.060,12.4,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:25:25.608,12.9,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:25:26.145,13.5,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:25:26.704,14.0,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:25:27.408,14.7,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:25:43.772,31.1,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:25:49.634,37.0,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:25:51.574,38.9,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:25:56.427,43.8,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:25:57.137,44.5,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:26:06.776,54.1,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:26:23.201,70.5,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:26:23.853,71.2,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:26:53.457,100.8,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:26:54.211,101.6,,Coleta 2 A_261116_124945.pdf
+2,A,desistencia,12:26:57.956,105.3,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:27:02.560,109.9,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:27:12.833,120.2,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:27:42.280,149.6,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:27:44.496,151.8,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:27:45.268,152.6,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:27:59.909,167.3,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:28:21.705,189.0,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:28:22.598,189.9,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:28:52.864,220.2,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:28:54.777,222.1,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:29:29.020,256.4,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:29:36.096,263.4,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:29:45.881,273.2,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:29:52.014,279.4,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:29:53.389,280.7,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:29:58.822,286.2,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:30:22.009,309.4,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:30:22.979,310.3,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:30:23.958,311.3,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:30:25.828,313.2,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:30:26.911,314.3,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:30:36.004,323.3,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:30:36.804,324.1,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:30:37.377,324.7,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:30:43.551,330.9,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:30:46.734,334.1,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:30:47.728,335.1,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:30:49.358,336.7,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:30:59.190,346.5,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:00.239,347.6,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:03.749,351.1,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:04.710,352.1,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:07.512,354.9,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:08.443,355.8,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:13.377,360.7,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:15.220,362.6,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:17.812,365.2,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:19.644,367.0,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:20.803,368.1,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:21.487,368.8,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:22.237,369.6,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:22.931,370.3,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:23.696,371.0,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:24.395,371.7,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:29.858,377.2,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:30.272,377.6,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:53.387,400.7,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:53.866,401.2,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:54.349,401.7,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:54.874,402.2,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:55.563,402.9,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:56.137,403.5,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:31:56.669,404.0,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:32:52.296,459.6,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:32:55.517,462.9,,Coleta 2 A_261116_124945.pdf
+2,A,desistencia,12:32:57.280,464.6,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:33:07.714,475.1,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:33:08.918,476.3,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:33:19.506,486.8,,Coleta 2 A_261116_124945.pdf
+2,A,desistencia,12:33:23.299,490.6,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:33:33.455,500.8,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:33:34.269,501.6,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:33:49.522,516.9,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:33:52.497,519.8,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:34:23.891,551.2,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:34:29.441,556.8,,Coleta 2 A_261116_124945.pdf
+2,A,desistencia,12:34:31.237,558.6,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:34:36.119,563.5,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:34:51.639,579.0,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:34:52.057,579.4,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:34:52.616,580.0,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:34:53.265,580.6,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:34:53.878,581.2,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:35:01.619,589.0,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:35:03.365,590.7,,Coleta 2 A_261116_124945.pdf
+2,A,chegada,12:35:07.549,594.9,,Coleta 2 A_261116_124945.pdf
+2,A,fim,12:42:38.201,1045.5,,Coleta 2 A_261116_124945.pdf
+3,B,inicio,12:52:03.392,0.0,0.0,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:52:23.847,20.5,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:52:30.546,27.2,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:52:40.826,37.4,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:52:49.163,45.8,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:52:52.090,48.7,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:52:58.791,55.4,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:53:10.158,66.8,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:55:02.971,179.6,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:55:06.962,183.6,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:55:19.920,196.5,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:55:26.081,202.7,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:55:31.815,208.4,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:56:23.568,260.2,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:56:26.709,263.3,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:56:34.211,270.8,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:56:43.557,280.2,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:56:46.671,283.3,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:57:05.877,302.5,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:57:37.249,333.9,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:57:49.453,346.1,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:58:27.987,384.6,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:58:39.514,396.1,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:59:29.617,446.2,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:59:34.092,450.7,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:59:56.053,472.7,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,12:59:58.038,474.6,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,13:00:11.080,487.7,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,13:00:24.439,501.0,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,13:00:52.166,528.8,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,13:00:56.750,533.4,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,13:01:11.693,548.3,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,13:01:51.594,588.2,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,13:02:08.651,605.3,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,13:02:11.191,607.8,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,13:02:15.158,611.8,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,13:02:16.275,612.9,,Coleta 3 - B_261116_130343.pdf
+3,B,inicio_atend,13:02:26.869,623.5,,Coleta 3 - B_261116_130343.pdf
+3,B,fim,13:02:32.433,629.0,,Coleta 3 - B_261116_130343.pdf
+3,A,inicio,12:51:44.257,0.0,0.0,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:52:00.463,16.2,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:52:11.382,27.1,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:52:16.881,32.6,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:52:27.200,42.9,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:52:28.624,44.4,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:52:29.973,45.7,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:52:49.082,64.8,,Coleta 3 A_261116_130300.pdf
+3,A,desistencia,12:52:55.140,70.9,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:54:43.103,178.8,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:54:44.370,180.1,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:54:57.843,193.6,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:54:59.653,195.4,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:55:10.737,206.5,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:56:00.373,256.1,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:56:00.989,256.7,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:56:05.669,261.4,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:56:22.042,277.8,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:56:24.601,280.3,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:56:44.532,300.3,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:57:13.753,329.5,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:57:14.413,330.2,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:57:26.910,342.7,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:57:44.573,360.3,,Coleta 3 A_261116_130300.pdf
+3,A,desistencia,12:57:48.752,364.5,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:58:13.591,389.3,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:59:09.433,445.2,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:59:11.018,446.8,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:59:12.380,448.1,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:59:14.222,450.0,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:59:19.128,454.9,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,12:59:54.878,490.6,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,13:00:03.472,499.2,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,13:00:25.428,521.2,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,13:00:51.196,546.9,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,13:00:53.919,549.7,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,13:01:02.306,558.0,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,13:01:12.224,568.0,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,13:01:13.357,569.1,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,13:01:19.769,575.5,,Coleta 3 A_261116_130300.pdf
+3,A,chegada,13:01:46.219,602.0,,Coleta 3 A_261116_130300.pdf
+3,A,fim,13:01:58.017,613.8,,Coleta 3 A_261116_130300.pdf
+1,B,inicio,11:52:18.032,0.0,0.0,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:52:27.302,9.3,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:52:42.583,24.6,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:52:50.593,32.6,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:52:56.243,38.2,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:53:00.160,42.1,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:53:24.979,66.9,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:53:32.295,74.3,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:54:32.164,134.1,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:54:38.922,140.9,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:54:49.556,151.5,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:54:54.158,156.1,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:55:18.268,180.2,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:56:07.928,229.9,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:56:21.420,243.4,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:56:25.361,247.3,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:56:33.221,255.2,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:56:53.996,276.0,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:57:03.172,285.1,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:57:16.548,298.5,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:57:22.057,304.0,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:57:26.207,308.2,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:57:28.989,311.0,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:57:31.480,313.4,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:57:44.451,326.4,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:57:48.881,330.8,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:57:57.454,339.4,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:57:59.982,341.9,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:58:04.058,346.0,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:58:16.600,358.6,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:58:24.379,366.3,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:58:49.597,391.6,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:58:56.587,398.6,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:59:09.291,411.3,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:59:15.350,417.3,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:59:20.157,422.1,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:59:22.773,424.7,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:59:26.831,428.8,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:59:38.671,440.6,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:59:43.801,445.8,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:59:46.027,448.0,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:59:50.518,452.5,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:59:56.654,458.6,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,11:59:59.327,461.3,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:00:24.773,486.7,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:00:34.680,496.6,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:00:45.549,507.5,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:00:47.391,509.4,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:00:50.091,512.1,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:00:53.689,515.7,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:00:59.726,521.7,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:01:05.681,527.6,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:01:24.352,546.3,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:01:27.326,549.3,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:01:30.635,552.6,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:01:36.010,558.0,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:01:41.951,563.9,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:01:46.977,568.9,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:01:49.310,571.3,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:01:51.777,573.7,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:01:57.319,579.3,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:02:03.135,585.1,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:02:09.893,591.9,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:02:18.119,600.1,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:02:26.662,608.6,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:02:34.621,616.6,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:02:41.295,623.3,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:02:44.930,626.9,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:02:47.644,629.6,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:02:49.937,631.9,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:03:12.287,654.3,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:03:19.430,661.4,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:03:24.816,666.8,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:03:32.973,674.9,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:03:43.584,685.6,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:03:52.934,694.9,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:04:05.377,707.3,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:04:12.335,714.3,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:04:28.312,730.3,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:04:32.914,734.9,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:04:44.437,746.4,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:04:45.779,747.7,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:04:52.029,754.0,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:04:59.447,761.4,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:05:04.662,766.6,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:05:07.896,769.9,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:05:09.187,771.2,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:05:17.207,779.2,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:05:23.631,785.6,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:05:45.748,807.7,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:05:51.027,813.0,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:05:55.498,817.5,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:05:58.879,820.8,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:06:03.992,826.0,,coleta 1 - B_261116_124950.pdf
+1,B,inicio_atend,12:06:07.158,829.1,,coleta 1 - B_261116_124950.pdf
+1,B,fim,12:06:15.027,837.0,,coleta 1 - B_261116_124950.pdf
+2,B,inicio,12:25:31.510,0.0,28.0,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:25:33.135,1.6,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:25:44.703,13.2,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:25:48.094,16.6,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:25:51.428,19.9,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:25:56.569,25.1,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:25:59.794,28.3,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:26:11.571,40.1,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:26:17.070,45.6,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:26:25.012,53.5,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:26:28.629,57.1,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:26:31.447,59.9,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:26:36.888,65.4,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:26:40.396,68.9,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:26:43.382,71.9,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:26:46.648,75.1,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:26:50.291,78.8,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:26:52.973,81.5,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:26:58.115,86.6,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:27:08.501,97.0,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:27:27.945,116.4,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:27:30.476,119.0,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:27:41.882,130.4,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:27:50.067,138.6,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:27:52.875,141.4,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:27:59.777,148.3,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:28:04.177,152.7,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:28:06.485,155.0,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:28:18.771,167.3,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:28:22.806,171.3,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:28:31.650,180.1,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:28:48.740,197.2,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:28:51.454,199.9,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:28:59.023,207.5,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:29:16.134,224.6,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:29:20.042,228.5,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:29:22.177,230.7,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:29:30.131,238.6,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:29:43.422,251.9,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:29:48.310,256.8,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:29:51.160,259.6,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:29:55.279,263.8,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:29:58.580,267.1,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:30:56.110,324.6,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:31:00.389,328.9,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:31:03.591,332.1,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:31:05.573,334.1,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:31:20.280,348.8,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:31:24.036,352.5,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:31:27.568,356.1,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:31:35.761,364.3,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:31:42.074,370.6,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:31:54.217,382.7,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:32:01.494,390.0,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:32:25.378,413.9,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:32:40.421,428.9,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:32:50.637,439.1,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:32:54.847,443.3,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:33:00.571,449.1,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:33:02.706,451.2,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:33:04.647,453.1,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:33:09.614,458.1,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:33:12.056,460.5,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:33:50.815,499.3,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:34:23.970,532.5,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:34:27.801,536.3,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:34:33.820,542.3,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:34:38.236,546.7,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:34:40.836,549.3,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:34:45.046,553.5,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:34:48.379,556.9,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:34:53.156,561.6,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:35:05.889,574.4,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:35:09.955,578.4,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:35:13.021,581.5,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:35:17.938,586.4,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:35:28.409,596.9,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:35:30.642,599.1,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:35:43.469,612.0,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:35:47.286,615.8,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:35:49.720,618.2,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:35:52.504,621.0,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:36:01.216,629.7,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:36:11.782,640.3,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:36:19.606,648.1,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:36:28.009,656.5,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:36:39.824,668.3,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:36:43.799,672.3,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:37:01.524,690.0,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:37:04.293,692.8,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:37:10.664,699.2,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:37:14.772,703.3,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:37:16.921,705.4,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:37:20.220,708.7,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:37:24.995,713.5,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:37:27.462,716.0,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:37:29.913,718.4,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:38:04.027,752.5,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:38:06.503,755.0,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:38:07.646,756.1,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:38:10.262,758.8,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:38:39.882,788.4,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:39:53.946,862.4,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:39:56.395,864.9,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:40:01.560,870.0,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:40:04.619,873.1,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:40:11.712,880.2,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:40:11.839,880.3,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:40:21.038,889.5,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:40:26.465,895.0,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:40:30.717,899.2,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:40:35.893,904.4,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:40:45.850,914.3,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:40:49.267,917.8,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:40:51.935,920.4,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:40:55.410,923.9,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:40:59.368,927.9,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:41:03.010,931.5,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:41:07.387,935.9,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:41:13.180,941.7,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:41:17.734,946.2,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:41:29.123,957.6,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:41:43.140,971.6,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:41:45.589,974.1,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:41:51.568,980.1,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:41:55.775,984.3,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:42:05.668,994.2,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:42:14.052,1002.5,,coleta 2 -B_261116_124958.pdf
+2,B,inicio_atend,12:42:16.537,1005.0,,coleta 2 -B_261116_124958.pdf
+2,B,fim,12:43:04.962,1053.5,,coleta 2 -B_261116_124958.pdf
+1,C,inicio,11:51:59.600,0.0,0.0,Coleta 1C.txt
+1,C,saida_atend,11:52:29.905,30.3,,Coleta 1C.txt
+1,C,saida_atend,11:52:37.839,38.2,,Coleta 1C.txt
+1,C,saida_atend,11:52:44.001,44.4,,Coleta 1C.txt
+1,C,saida_atend,11:52:45.996,46.4,,Coleta 1C.txt
+1,C,saida_atend,11:53:14.976,75.4,,Coleta 1C.txt
+1,C,saida_atend,11:53:16.176,76.6,,Coleta 1C.txt
+1,C,saida_atend,11:54:09.490,129.9,,Coleta 1C.txt
+1,C,saida_atend,11:54:22.617,143.0,,Coleta 1C.txt
+1,C,saida_atend,11:54:53.690,174.1,,Coleta 1C.txt
+1,C,saida_atend,11:55:45.233,225.6,,Coleta 1C.txt
+1,C,saida_atend,11:55:53.071,233.5,,Coleta 1C.txt
+1,C,saida_atend,11:55:56.086,236.5,,Coleta 1C.txt
+1,C,saida_atend,11:56:08.952,249.4,,Coleta 1C.txt
+1,C,saida_atend,11:56:11.881,252.3,,Coleta 1C.txt
+1,C,saida_atend,11:56:20.010,260.4,,Coleta 1C.txt
+1,C,saida_atend,11:56:41.959,282.4,,Coleta 1C.txt
+1,C,saida_atend,11:56:55.330,295.7,,Coleta 1C.txt
+1,C,saida_atend,11:57:04.274,304.7,,Coleta 1C.txt
+1,C,saida_atend,11:57:10.555,311.0,,Coleta 1C.txt
+1,C,saida_atend,11:57:13.049,313.4,,Coleta 1C.txt
+1,C,saida_atend,11:57:16.753,317.2,,Coleta 1C.txt
+1,C,saida_atend,11:57:18.022,318.4,,Coleta 1C.txt
+1,C,saida_atend,11:57:31.121,331.5,,Coleta 1C.txt
+1,C,saida_atend,11:57:36.293,336.7,,Coleta 1C.txt
+1,C,saida_atend,11:57:44.961,345.4,,Coleta 1C.txt
+1,C,saida_atend,11:57:47.010,347.4,,Coleta 1C.txt
+1,C,saida_atend,11:57:49.391,349.8,,Coleta 1C.txt
+1,C,saida_atend,11:58:04.227,364.6,,Coleta 1C.txt
+1,C,saida_atend,11:58:09.501,369.9,,Coleta 1C.txt
+1,C,saida_atend,11:58:36.390,396.8,,Coleta 1C.txt
+1,C,saida_atend,11:58:39.288,399.7,,Coleta 1C.txt
+1,C,saida_atend,11:58:56.038,416.4,,Coleta 1C.txt
+1,C,saida_atend,11:59:01.841,422.2,,Coleta 1C.txt
+1,C,saida_atend,11:59:05.700,426.1,,Coleta 1C.txt
+1,C,saida_atend,11:59:10.088,430.5,,Coleta 1C.txt
+1,C,saida_atend,11:59:14.121,434.5,,Coleta 1C.txt
+1,C,saida_atend,11:59:24.470,444.9,,Coleta 1C.txt
+1,C,saida_atend,11:59:32.015,452.4,,Coleta 1C.txt
+1,C,saida_atend,11:59:33.761,454.2,,Coleta 1C.txt
+1,C,saida_atend,11:59:37.863,458.3,,Coleta 1C.txt
+1,C,saida_atend,11:59:44.129,464.5,,Coleta 1C.txt
+1,C,saida_atend,11:59:47.232,467.6,,Coleta 1C.txt
+1,C,saida_atend,11:59:48.489,468.9,,Coleta 1C.txt
+1,C,saida_atend,11:59:50.849,471.2,,Coleta 1C.txt
+1,C,saida_atend,12:00:32.258,512.7,,Coleta 1C.txt
+1,C,saida_atend,12:00:34.502,514.9,,Coleta 1C.txt
+1,C,saida_atend,12:00:37.097,517.5,,Coleta 1C.txt
+1,C,saida_atend,12:00:41.109,521.5,,Coleta 1C.txt
+1,C,saida_atend,12:00:43.727,524.1,,Coleta 1C.txt
+1,C,saida_atend,12:00:49.241,529.6,,Coleta 1C.txt
+1,C,saida_atend,12:01:02.217,542.6,,Coleta 1C.txt
+1,C,saida_atend,12:01:10.126,550.5,,Coleta 1C.txt
+1,C,saida_atend,12:01:16.222,556.6,,Coleta 1C.txt
+1,C,saida_atend,12:01:19.966,560.4,,Coleta 1C.txt
+1,C,saida_atend,12:01:30.445,570.8,,Coleta 1C.txt
+1,C,saida_atend,12:01:35.591,576.0,,Coleta 1C.txt
+1,C,saida_atend,12:01:37.442,577.8,,Coleta 1C.txt
+1,C,saida_atend,12:01:41.382,581.8,,Coleta 1C.txt
+1,C,saida_atend,12:01:44.687,585.1,,Coleta 1C.txt
+1,C,saida_atend,12:01:50.730,591.1,,Coleta 1C.txt
+1,C,saida_atend,12:01:57.701,598.1,,Coleta 1C.txt
+1,C,saida_atend,12:02:06.264,606.7,,Coleta 1C.txt
+1,C,saida_atend,12:02:14.410,614.8,,Coleta 1C.txt
+1,C,saida_atend,12:02:20.240,620.6,,Coleta 1C.txt
+1,C,saida_atend,12:02:22.963,623.4,,Coleta 1C.txt
+1,C,saida_atend,12:02:25.140,625.5,,Coleta 1C.txt
+1,C,saida_atend,12:02:27.544,627.9,,Coleta 1C.txt
+1,C,saida_atend,12:02:35.283,635.7,,Coleta 1C.txt
+1,C,saida_atend,12:03:03.809,664.2,,Coleta 1C.txt
+1,C,saida_atend,12:03:08.377,668.8,,Coleta 1C.txt
+1,C,saida_atend,12:03:13.055,673.5,,Coleta 1C.txt
+1,C,saida_atend,12:03:20.343,680.7,,Coleta 1C.txt
+1,C,saida_atend,12:03:32.142,692.5,,Coleta 1C.txt
+1,C,saida_atend,12:03:41.416,701.8,,Coleta 1C.txt
+1,C,saida_atend,12:03:53.716,714.1,,Coleta 1C.txt
+1,C,saida_atend,12:04:00.019,720.4,,Coleta 1C.txt
+1,C,saida_atend,12:04:17.090,737.5,,Coleta 1C.txt
+1,C,saida_atend,12:04:28.414,748.8,,Coleta 1C.txt
+1,C,saida_atend,12:04:31.072,751.5,,Coleta 1C.txt
+1,C,saida_atend,12:04:33.301,753.7,,Coleta 1C.txt
+1,C,saida_atend,12:04:34.851,755.3,,Coleta 1C.txt
+1,C,saida_atend,12:04:50.167,770.6,,Coleta 1C.txt
+1,C,saida_atend,12:04:52.282,772.7,,Coleta 1C.txt
+1,C,saida_atend,12:04:56.048,776.4,,Coleta 1C.txt
+1,C,saida_atend,12:04:59.701,780.1,,Coleta 1C.txt
+1,C,saida_atend,12:05:04.270,784.7,,Coleta 1C.txt
+1,C,saida_atend,12:05:10.855,791.3,,Coleta 1C.txt
+1,C,saida_atend,12:05:32.990,813.4,,Coleta 1C.txt
+1,C,saida_atend,12:05:39.274,819.7,,Coleta 1C.txt
+1,C,saida_atend,12:05:42.730,823.1,,Coleta 1C.txt
+1,C,saida_atend,12:05:46.379,826.8,,Coleta 1C.txt
+1,C,saida_atend,12:05:50.577,831.0,,Coleta 1C.txt
+1,C,saida_atend,12:05:53.696,834.1,,Coleta 1C.txt
+1,C,saida_atend,12:05:56.938,837.3,,Coleta 1C.txt
+1,C,fim,12:05:57.964,838.4,,Coleta 1C.txt
+2,C,inicio,12:25:33.403,0.0,28.0,Coleta 2C.txt
+2,C,saida_atend,12:25:49.887,16.5,,Coleta 2C.txt
+2,C,saida_atend,12:25:51.615,18.2,,Coleta 2C.txt
+2,C,saida_atend,12:25:55.852,22.4,,Coleta 2C.txt
+2,C,saida_atend,12:25:58.709,25.3,,Coleta 2C.txt
+2,C,saida_atend,12:26:00.564,27.2,,Coleta 2C.txt
+2,C,saida_atend,12:26:02.562,29.2,,Coleta 2C.txt
+2,C,saida_atend,12:26:06.614,33.2,,Coleta 2C.txt
+2,C,saida_atend,12:26:10.611,37.2,,Coleta 2C.txt
+2,C,saida_atend,12:26:19.008,45.6,,Coleta 2C.txt
+2,C,saida_atend,12:26:20.123,46.7,,Coleta 2C.txt
+2,C,saida_atend,12:26:23.556,50.2,,Coleta 2C.txt
+2,C,saida_atend,12:26:27.919,54.5,,Coleta 2C.txt
+2,C,saida_atend,12:26:29.770,56.4,,Coleta 2C.txt
+2,C,saida_atend,12:26:34.245,60.8,,Coleta 2C.txt
+2,C,saida_atend,12:26:37.781,64.4,,Coleta 2C.txt
+2,C,saida_atend,12:26:39.811,66.4,,Coleta 2C.txt
+2,C,saida_atend,12:26:45.446,72.0,,Coleta 2C.txt
+2,C,saida_atend,12:26:57.340,83.9,,Coleta 2C.txt
+2,C,saida_atend,12:27:16.705,103.3,,Coleta 2C.txt
+2,C,saida_atend,12:27:18.313,104.9,,Coleta 2C.txt
+2,C,saida_atend,12:27:28.428,115.0,,Coleta 2C.txt
+2,C,saida_atend,12:27:37.804,124.4,,Coleta 2C.txt
+2,C,saida_atend,12:27:40.652,127.2,,Coleta 2C.txt
+2,C,saida_atend,12:27:47.251,133.8,,Coleta 2C.txt
+2,C,saida_atend,12:27:50.986,137.6,,Coleta 2C.txt
+2,C,saida_atend,12:27:53.624,140.2,,Coleta 2C.txt
+2,C,saida_atend,12:28:06.157,152.8,,Coleta 2C.txt
+2,C,saida_atend,12:28:10.383,157.0,,Coleta 2C.txt
+2,C,saida_atend,12:28:19.255,165.9,,Coleta 2C.txt
+2,C,saida_atend,12:28:36.934,183.5,,Coleta 2C.txt
+2,C,saida_atend,12:28:39.533,186.1,,Coleta 2C.txt
+2,C,saida_atend,12:28:46.979,193.6,,Coleta 2C.txt
+2,C,saida_atend,12:29:02.560,209.2,,Coleta 2C.txt
+2,C,saida_atend,12:29:07.149,213.7,,Coleta 2C.txt
+2,C,saida_atend,12:29:09.947,216.5,,Coleta 2C.txt
+2,C,saida_atend,12:29:17.569,224.2,,Coleta 2C.txt
+2,C,saida_atend,12:29:33.428,240.0,,Coleta 2C.txt
+2,C,saida_atend,12:29:36.175,242.8,,Coleta 2C.txt
+2,C,saida_atend,12:29:38.153,244.8,,Coleta 2C.txt
+2,C,saida_atend,12:29:43.162,249.8,,Coleta 2C.txt
+2,C,saida_atend,12:29:47.287,253.9,,Coleta 2C.txt
+2,C,saida_atend,12:30:44.386,311.0,,Coleta 2C.txt
+2,C,saida_atend,12:30:47.882,314.5,,Coleta 2C.txt
+2,C,saida_atend,12:30:51.787,318.4,,Coleta 2C.txt
+2,C,saida_atend,12:30:53.219,319.8,,Coleta 2C.txt
+2,C,saida_atend,12:31:07.526,334.1,,Coleta 2C.txt
+2,C,saida_atend,12:31:11.930,338.5,,Coleta 2C.txt
+2,C,saida_atend,12:31:15.662,342.3,,Coleta 2C.txt
+2,C,saida_atend,12:31:26.014,352.6,,Coleta 2C.txt
+2,C,saida_atend,12:31:28.783,355.4,,Coleta 2C.txt
+2,C,saida_atend,12:31:35.172,361.8,,Coleta 2C.txt
+2,C,saida_atend,12:31:44.886,371.5,,Coleta 2C.txt
+2,C,saida_atend,12:32:16.832,403.4,,Coleta 2C.txt
+2,C,saida_atend,12:32:25.489,412.1,,Coleta 2C.txt
+2,C,saida_atend,12:32:38.846,425.4,,Coleta 2C.txt
+2,C,saida_atend,12:32:43.340,429.9,,Coleta 2C.txt
+2,C,saida_atend,12:32:48.609,435.2,,Coleta 2C.txt
+2,C,saida_atend,12:32:50.257,436.9,,Coleta 2C.txt
+2,C,saida_atend,12:32:52.867,439.5,,Coleta 2C.txt
+2,C,saida_atend,12:32:56.861,443.5,,Coleta 2C.txt
+2,C,saida_atend,12:33:00.413,447.0,,Coleta 2C.txt
+2,C,saida_atend,12:33:39.401,486.0,,Coleta 2C.txt
+2,C,saida_atend,12:34:06.907,513.5,,Coleta 2C.txt
+2,C,saida_atend,12:34:16.550,523.1,,Coleta 2C.txt
+2,C,saida_atend,12:34:21.614,528.2,,Coleta 2C.txt
+2,C,saida_atend,12:34:26.612,533.2,,Coleta 2C.txt
+2,C,saida_atend,12:34:31.021,537.6,,Coleta 2C.txt
+2,C,saida_atend,12:34:33.567,540.2,,Coleta 2C.txt
+2,C,saida_atend,12:34:38.264,544.9,,Coleta 2C.txt
+2,C,saida_atend,12:34:40.904,547.5,,Coleta 2C.txt
+2,C,saida_atend,12:34:54.059,560.7,,Coleta 2C.txt
+2,C,saida_atend,12:34:58.357,565.0,,Coleta 2C.txt
+2,C,saida_atend,12:35:00.738,567.3,,Coleta 2C.txt
+2,C,saida_atend,12:35:03.140,569.7,,Coleta 2C.txt
+2,C,saida_atend,12:35:16.700,583.3,,Coleta 2C.txt
+2,C,saida_atend,12:35:18.910,585.5,,Coleta 2C.txt
+2,C,saida_atend,12:35:31.562,598.2,,Coleta 2C.txt
+2,C,saida_atend,12:35:34.941,601.5,,Coleta 2C.txt
+2,C,saida_atend,12:35:36.785,603.4,,Coleta 2C.txt
+2,C,saida_atend,12:35:40.243,606.8,,Coleta 2C.txt
+2,C,saida_atend,12:35:49.527,616.1,,Coleta 2C.txt
+2,C,saida_atend,12:36:01.005,627.6,,Coleta 2C.txt
+2,C,saida_atend,12:36:07.823,634.4,,Coleta 2C.txt
+2,C,saida_atend,12:36:15.356,642.0,,Coleta 2C.txt
+2,C,saida_atend,12:36:27.404,654.0,,Coleta 2C.txt
+2,C,saida_atend,12:36:31.547,658.1,,Coleta 2C.txt
+2,C,saida_atend,12:36:47.989,674.6,,Coleta 2C.txt
+2,C,saida_atend,12:36:52.067,678.7,,Coleta 2C.txt
+2,C,saida_atend,12:36:58.496,685.1,,Coleta 2C.txt
+2,C,saida_atend,12:37:02.870,689.5,,Coleta 2C.txt
+2,C,saida_atend,12:37:04.947,691.5,,Coleta 2C.txt
+2,C,saida_atend,12:37:10.866,697.5,,Coleta 2C.txt
+2,C,saida_atend,12:37:12.666,699.3,,Coleta 2C.txt
+2,C,saida_atend,12:37:14.640,701.2,,Coleta 2C.txt
+2,C,saida_atend,12:37:17.159,703.8,,Coleta 2C.txt
+2,C,saida_atend,12:37:51.162,737.8,,Coleta 2C.txt
+2,C,saida_atend,12:37:55.669,742.3,,Coleta 2C.txt
+2,C,saida_atend,12:37:57.352,743.9,,Coleta 2C.txt
+2,C,saida_atend,12:37:59.377,746.0,,Coleta 2C.txt
+2,C,saida_atend,12:38:27.591,774.2,,Coleta 2C.txt
+2,C,saida_atend,12:39:42.120,848.7,,Coleta 2C.txt
+2,C,saida_atend,12:39:43.975,850.6,,Coleta 2C.txt
+2,C,saida_atend,12:39:49.432,856.0,,Coleta 2C.txt
+2,C,saida_atend,12:39:52.069,858.7,,Coleta 2C.txt
+2,C,saida_atend,12:39:59.206,865.8,,Coleta 2C.txt
+2,C,saida_atend,12:40:04.513,871.1,,Coleta 2C.txt
+2,C,saida_atend,12:40:06.752,873.3,,Coleta 2C.txt
+2,C,saida_atend,12:40:11.532,878.1,,Coleta 2C.txt
+2,C,saida_atend,12:40:18.874,885.5,,Coleta 2C.txt
+2,C,saida_atend,12:40:23.070,889.7,,Coleta 2C.txt
+2,C,saida_atend,12:40:33.269,899.9,,Coleta 2C.txt
+2,C,saida_atend,12:40:35.868,902.5,,Coleta 2C.txt
+2,C,saida_atend,12:40:38.538,905.1,,Coleta 2C.txt
+2,C,saida_atend,12:40:41.372,908.0,,Coleta 2C.txt
+2,C,saida_atend,12:40:47.471,914.1,,Coleta 2C.txt
+2,C,saida_atend,12:40:49.655,916.3,,Coleta 2C.txt
+2,C,saida_atend,12:40:54.507,921.1,,Coleta 2C.txt
+2,C,saida_atend,12:40:57.288,923.9,,Coleta 2C.txt
+2,C,saida_atend,12:41:05.677,932.3,,Coleta 2C.txt
+2,C,saida_atend,12:41:12.729,939.3,,Coleta 2C.txt
+2,C,saida_atend,12:41:31.371,958.0,,Coleta 2C.txt
+2,C,saida_atend,12:41:34.247,960.8,,Coleta 2C.txt
+2,C,saida_atend,12:41:41.316,967.9,,Coleta 2C.txt
+2,C,saida_atend,12:41:44.377,971.0,,Coleta 2C.txt
+2,C,saida_atend,12:41:46.600,973.2,,Coleta 2C.txt
+2,C,saida_atend,12:42:00.081,986.7,,Coleta 2C.txt
+2,C,saida_atend,12:42:03.835,990.4,,Coleta 2C.txt
+2,C,saida_atend,12:42:50.136,1036.7,,Coleta 2C.txt
+2,C,fim,12:42:51.932,1038.5,,Coleta 2C.txt
+3,C,inicio,12:51:51.369,0.0,0.0,Coleta 3C.txt
+3,C,saida_atend,12:52:14.747,23.4,,Coleta 3C.txt
+3,C,saida_atend,12:52:28.536,37.2,,Coleta 3C.txt
+3,C,saida_atend,12:52:36.602,45.2,,Coleta 3C.txt
+3,C,saida_atend,12:52:39.984,48.6,,Coleta 3C.txt
+3,C,saida_atend,12:52:45.584,54.2,,Coleta 3C.txt
+3,C,saida_atend,12:52:56.031,64.7,,Coleta 3C.txt
+3,C,saida_atend,12:53:08.126,76.8,,Coleta 3C.txt
+3,C,saida_atend,12:54:52.460,181.1,,Coleta 3C.txt
+3,C,saida_atend,12:55:01.253,189.9,,Coleta 3C.txt
+3,C,saida_atend,12:55:12.356,201.0,,Coleta 3C.txt
+3,C,saida_atend,12:55:15.562,204.2,,Coleta 3C.txt
+3,C,saida_atend,12:56:11.652,260.3,,Coleta 3C.txt
+3,C,saida_atend,12:56:14.904,263.5,,Coleta 3C.txt
+3,C,saida_atend,12:56:20.991,269.6,,Coleta 3C.txt
+3,C,saida_atend,12:56:31.664,280.3,,Coleta 3C.txt
+3,C,saida_atend,12:56:34.380,283.0,,Coleta 3C.txt
+3,C,saida_atend,12:56:36.593,285.2,,Coleta 3C.txt
+3,C,saida_atend,12:57:00.713,309.3,,Coleta 3C.txt
+3,C,saida_atend,12:57:31.217,339.8,,Coleta 3C.txt
+3,C,saida_atend,12:57:52.825,361.5,,Coleta 3C.txt
+3,C,saida_atend,12:58:25.733,394.4,,Coleta 3C.txt
+3,C,saida_atend,12:58:30.085,398.7,,Coleta 3C.txt
+3,C,saida_atend,12:59:21.298,449.9,,Coleta 3C.txt
+3,C,saida_atend,12:59:41.774,470.4,,Coleta 3C.txt
+3,C,saida_atend,12:59:45.647,474.3,,Coleta 3C.txt
+3,C,saida_atend,12:59:57.501,486.1,,Coleta 3C.txt
+3,C,saida_atend,13:00:17.614,506.2,,Coleta 3C.txt
+3,C,saida_atend,13:00:39.129,527.8,,Coleta 3C.txt
+3,C,saida_atend,13:00:43.185,531.8,,Coleta 3C.txt
+3,C,saida_atend,13:00:46.035,534.7,,Coleta 3C.txt
+3,C,saida_atend,13:01:44.677,593.3,,Coleta 3C.txt
+3,C,saida_atend,13:01:56.116,604.7,,Coleta 3C.txt
+3,C,saida_atend,13:01:58.292,606.9,,Coleta 3C.txt
+3,C,saida_atend,13:02:02.407,611.0,,Coleta 3C.txt
+3,C,saida_atend,13:02:03.737,612.4,,Coleta 3C.txt
+3,C,saida_atend,13:02:06.233,614.9,,Coleta 3C.txt
+3,C,saida_atend,13:02:16.269,624.9,,Coleta 3C.txt
+3,C,fim,13:02:20.677,629.3,,Coleta 3C.txt
